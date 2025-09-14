@@ -2,7 +2,7 @@ import React from 'react';
 
 // The parent component, App.tsx, will provide this navigation function.
 interface FooterProps {
-    onNavigate: (page: 'privacy' | 'terms' | 'about' | 'contact') => void;
+    onNavigate: (page: 'privacy' | 'terms' | 'about' | 'contact' | 'blog') => void;
 }
 
 const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
@@ -12,6 +12,9 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                  <div className="flex justify-center items-center flex-wrap gap-x-6 gap-y-2">
                     <button onClick={() => onNavigate('about')} className="hover:text-gray-300 hover:underline transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
                         About Us
+                    </button>
+                    <button onClick={() => onNavigate('blog')} className="hover:text-gray-300 hover:underline transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
+                        Blog
                     </button>
                     <button onClick={() => onNavigate('contact')} className="hover:text-gray-300 hover:underline transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
                         Contact Us

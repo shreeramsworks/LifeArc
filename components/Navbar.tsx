@@ -1,9 +1,12 @@
 import React from 'react';
 
+type Page = 'home' | 'tools' | 'insights' | 'privacy' | 'terms' | 'about' | 'contact' | 'blog';
+type Tool = 'ageCalculator' | 'familyTracker';
+
 interface NavbarProps {
     currentPage: string;
-    activeTool: 'ageCalculator' | 'familyTracker';
-    onNavigate: (page: 'home' | 'tools' | 'insights' | 'privacy' | 'terms' | 'about' | 'contact', tool?: 'ageCalculator' | 'familyTracker') => void;
+    activeTool: Tool;
+    onNavigate: (page: Page, options?: Tool | string) => void;
 }
 
 const NavButton: React.FC<{
@@ -54,6 +57,12 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, activeTool, onNavigate }) 
                         Chrono Insights
                     </NavButton>
                     <NavButton
+                        isActive={currentPage === 'blog'}
+                        onClick={() => onNavigate('blog')}
+                    >
+                        Blog
+                    </NavButton>
+                    <NavButton
                         isActive={currentPage === 'about'}
                         onClick={() => onNavigate('about')}
                     >
@@ -69,6 +78,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, activeTool, onNavigate }) 
                          <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('tools', 'ageCalculator'); }} className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">Age Calculator</a>
                          <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('tools', 'familyTracker'); }} className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">Family Tracker</a>
                          <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('insights'); }} className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">Chrono Insights</a>
+                         <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('blog'); }} className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">Blog</a>
                          <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('about'); }} className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">About Us</a>
                      </div>
                 </div>

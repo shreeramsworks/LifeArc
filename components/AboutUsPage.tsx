@@ -29,6 +29,9 @@ const AboutUsPage: React.FC = () => {
                     <p>We are passionate about precision. LifeArc utilizes high-precision calculations based on Julian Day Numbers to avoid common errors found in other age calculators, ensuring accuracy regardless of timezones or daylight saving time. Our tools are built with modern web technologies to be fast, responsive, and accessible on any device.</p>
                     <p>We are constantly refining our tools and expanding our library of insights to provide you with an ever-evolving platform for personal discovery.</p>
                     
+                    <h2 className="text-blue-400">Who We Are</h2>
+                    <p>LifeArc is developed and maintained by a small team of independent designers and developers who are passionate about data visualization, personal privacy, and creating meaningful web experiences. We believe in building useful, transparent tools that respect the user.</p>
+
                     <h2 className="text-blue-400">Our Commitment to You</h2>
                     <p>LifeArc is a passion project dedicated to helping you chart your personal universe. We are committed to maintaining a high-quality, free-to-use service supported transparently through non-intrusive advertising. Thank you for joining us on this journey of discovery.</p>
                 </div>
