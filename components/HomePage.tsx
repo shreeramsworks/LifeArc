@@ -4,7 +4,7 @@ import { calculateAgeDuration } from '../lib/familyCalculations';
 import AdSenseBanner from './AdSenseBanner';
 
 interface HomePageProps {
-    onNavigate: (page: 'home' | 'tools' | 'insights' | 'privacy' | 'terms', tool?: 'ageCalculator' | 'familyTracker') => void;
+    onNavigate: (page: 'home' | 'tools' | 'insights' | 'privacy' | 'terms' | 'about' | 'contact', tool?: 'ageCalculator' | 'familyTracker') => void;
 }
 
 const LiveMiniCalculator: React.FC = () => {

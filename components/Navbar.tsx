@@ -3,7 +3,7 @@ import React from 'react';
 interface NavbarProps {
     currentPage: string;
     activeTool: 'ageCalculator' | 'familyTracker';
-    onNavigate: (page: 'home' | 'tools' | 'insights' | 'privacy' | 'terms', tool?: 'ageCalculator' | 'familyTracker') => void;
+    onNavigate: (page: 'home' | 'tools' | 'insights' | 'privacy' | 'terms' | 'about' | 'contact', tool?: 'ageCalculator' | 'familyTracker') => void;
 }
 
 const NavButton: React.FC<{
@@ -53,6 +53,12 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, activeTool, onNavigate }) 
                     >
                         Chrono Insights
                     </NavButton>
+                    <NavButton
+                        isActive={currentPage === 'about'}
+                        onClick={() => onNavigate('about')}
+                    >
+                        About Us
+                    </NavButton>
                 </div>
                 <div className="sm:hidden relative group">
                      <button className="text-gray-300 hover:text-white p-2 rounded-md">
@@ -63,6 +69,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, activeTool, onNavigate }) 
                          <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('tools', 'ageCalculator'); }} className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">Age Calculator</a>
                          <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('tools', 'familyTracker'); }} className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">Family Tracker</a>
                          <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('insights'); }} className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">Chrono Insights</a>
+                         <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('about'); }} className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">About Us</a>
                      </div>
                 </div>
             </nav>

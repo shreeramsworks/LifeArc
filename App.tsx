@@ -6,13 +6,15 @@ import InsightsView from './components/InsightsView';
 import Footer from './components/Footer';
 import PrivacyPolicyPage from './components/PrivacyPolicyPage';
 import TermsOfServicePage from './components/TermsOfServicePage';
+import AboutUsPage from './components/AboutUsPage';
+import ContactUsPage from './components/ContactUsPage';
 
 
 const App: React.FC = () => {
     const [currentPage, setCurrentPage] = useState('home');
     const [activeTool, setActiveTool] = useState<'ageCalculator' | 'familyTracker'>('ageCalculator');
 
-    const handleNavigate = (page: 'home' | 'tools' | 'insights' | 'privacy' | 'terms', tool?: 'ageCalculator' | 'familyTracker') => {
+    const handleNavigate = (page: 'home' | 'tools' | 'insights' | 'privacy' | 'terms' | 'about' | 'contact', tool?: 'ageCalculator' | 'familyTracker') => {
         setCurrentPage(page);
         if (tool) {
             setActiveTool(tool);
@@ -32,6 +34,10 @@ const App: React.FC = () => {
                 return <PrivacyPolicyPage />;
             case 'terms':
                 return <TermsOfServicePage />;
+            case 'about':
+                return <AboutUsPage />;
+            case 'contact':
+                return <ContactUsPage />;
             default:
                 return <HomePage onNavigate={handleNavigate} />;
         }
