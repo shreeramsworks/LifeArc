@@ -3,7 +3,7 @@ import React from 'react';
 interface NavbarProps {
     currentPage: string;
     activeTool: 'ageCalculator' | 'familyTracker';
-    onNavigate: (page: 'home' | 'tools' | 'insights', tool?: 'ageCalculator' | 'familyTracker') => void;
+    onNavigate: (page: 'home' | 'tools' | 'insights' | 'privacy' | 'terms', tool?: 'ageCalculator' | 'familyTracker') => void;
 }
 
 const NavButton: React.FC<{
