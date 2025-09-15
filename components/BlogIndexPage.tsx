@@ -27,6 +27,9 @@ const BlogIndexPage: React.FC<BlogIndexPageProps> = ({ onNavigate }) => {
                             <p className="mt-4 text-gray-400">
                                 {article.summary}
                             </p>
+                            <div className="mt-4 text-sm text-gray-500">
+                                <span>By {article.author.name}</span> | <span suppressHydrationWarning>{new Date(article.publishDate + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                            </div>
                             <button
                                 onClick={() => onNavigate('blog', article.slug)}
                                 className="mt-6 inline-block text-blue-400 font-semibold hover:underline"

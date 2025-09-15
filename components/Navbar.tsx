@@ -26,7 +26,13 @@ const NavButton: React.FC<{
 };
 
 const Navbar: React.FC<NavbarProps> = ({ currentPage, activeTool, onNavigate }) => {
-    
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+
+    const handleMobileNavigate = (page: Page, options?: Tool | string) => {
+        onNavigate(page, options);
+        setIsMobileMenuOpen(false);
+    };
+
     return (
         <header className="bg-gray-900/80 backdrop-blur-sm shadow-md fixed top-0 left-0 right-0 z-50 h-16 border-b border-gray-800">
             <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
@@ -69,18 +75,20 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, activeTool, onNavigate }) 
                         About Us
                     </NavButton>
                 </div>
-                <div className="sm:hidden relative group">
-                     <button className="text-gray-300 hover:text-white p-2 rounded-md">
-                        <i className="fa-solid fa-bars text-xl"></i>
+                <div className="sm:hidden relative">
+                     <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-gray-300 hover:text-white p-2 rounded-md" aria-label="Toggle mobile menu" aria-expanded={isMobileMenuOpen}>
+                        <i className={`fa-solid ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'} text-xl`}></i>
                      </button>
-                     <div className="absolute top-full right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50 ring-1 ring-black ring-opacity-5 hidden group-hover:block">
-                         <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('home'); }} className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">Home</a>
-                         <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('tools', 'ageCalculator'); }} className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">Age Calculator</a>
-                         <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('tools', 'familyTracker'); }} className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">Family Tracker</a>
-                         <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('insights'); }} className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">Chrono Insights</a>
-                         <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('blog'); }} className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">Blog</a>
-                         <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('about'); }} className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">About Us</a>
-                     </div>
+                     {isMobileMenuOpen && (
+                         <div className="absolute top-full right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50 ring-1 ring-black ring-opacity-5">
+                             <a href="#home" onClick={(e) => { e.preventDefault(); handleMobileNavigate('home'); }} className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">Home</a>
+                             <a href="#tools/ageCalculator" onClick={(e) => { e.preventDefault(); handleMobileNavigate('tools', 'ageCalculator'); }} className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">Age Calculator</a>
+                             <a href="#tools/familyTracker" onClick={(e) => { e.preventDefault(); handleMobileNavigate('tools', 'familyTracker'); }} className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">Family Tracker</a>
+                             <a href="#insights" onClick={(e) => { e.preventDefault(); handleMobileNavigate('insights'); }} className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">Chrono Insights</a>
+                             <a href="#blog" onClick={(e) => { e.preventDefault(); handleMobileNavigate('blog'); }} className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">Blog</a>
+                             <a href="#about" onClick={(e) => { e.preventDefault(); handleMobileNavigate('about'); }} className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">About Us</a>
+                         </div>
+                     )}
                 </div>
             </nav>
         </header>

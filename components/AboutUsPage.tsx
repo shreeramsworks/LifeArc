@@ -32,7 +32,34 @@ const AboutUsPage: React.FC = () => {
                     <h2 className="text-blue-400">Who We Are</h2>
                     <p>LifeArc is developed and maintained by a small team of independent designers and developers who are passionate about data visualization, personal privacy, and creating meaningful web experiences. We believe in building useful, transparent tools that respect the user.</p>
 
-                    <h2 className="text-blue-400">Our Commitment to You</h2>
+                    <h2 className="text-blue-400">Our Expert Contributors</h2>
+                    <p>LifeArc's content is enriched by a team of passionate experts who contribute their knowledge to our blog and insight descriptions. Our goal is to provide you with well-researched, thoughtful content to accompany our tools.</p>
+
+                    <div className="mt-6 space-y-6 not-prose">
+                        <div className="flex items-start gap-4 p-4 bg-gray-900 rounded-lg">
+                            <img src="https://i.pravatar.cc/150?img=9" alt="Dr. Evelyn Reed" className="w-16 h-16 rounded-full object-cover flex-shrink-0" />
+                            <div>
+                                <h3 className="font-bold text-lg text-white">Dr. Evelyn Reed</h3>
+                                <p className="text-sm text-gray-400">Dr. Reed holds a Ph.D. in Psychology from Stanford University, specializing in human perception of time and memory. Her work explores the intersection of cognitive science and personal history.</p>
+                            </div>
+                        </div>
+                        <div className="flex items-start gap-4 p-4 bg-gray-900 rounded-lg">
+                            <img src="https://i.pravatar.cc/150?img=10" alt="James Carter" className="w-16 h-16 rounded-full object-cover flex-shrink-0" />
+                            <div>
+                                <h3 className="font-bold text-lg text-white">James Carter</h3>
+                                <p className="text-sm text-gray-400">James is a historian and genealogy enthusiast with over 20 years of experience in tracing family lineages. He is passionate about making historical research accessible to everyone.</p>
+                            </div>
+                        </div>
+                        <div className="flex items-start gap-4 p-4 bg-gray-900 rounded-lg">
+                            <img src="https://i.pravatar.cc/150?img=11" alt="Sofia Chen" className="w-16 h-16 rounded-full object-cover flex-shrink-0" />
+                            <div>
+                                <h3 className="font-bold text-lg text-white">Sofia Chen</h3>
+                                <p className="text-sm text-gray-400">Sofia is a writer and wellness advocate who explores alternative philosophies and systems of self-knowledge, including numerology, astrology, and ancient wisdom traditions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 className="text-blue-400 mt-8">Our Commitment to You</h2>
                     <p>LifeArc is a passion project dedicated to helping you chart your personal universe. We are committed to maintaining a high-quality, free-to-use service supported transparently through non-intrusive advertising. Thank you for joining us on this journey of discovery.</p>
                 </div>
             </main>
