@@ -56,7 +56,7 @@ const App: React.FC = () => {
     useEffect(() => {
         const metaDescriptionTag = document.querySelector('meta[name="description"]');
         let title = 'LifeArc | Interactive Age Calculator & Personal Insights';
-        let description = "Chart your personal universe with LifeArc. An interactive age calculator to track your family legacy, discover your life-path number, and see your life in real-time.";
+        let description = "Explore your personal universe with LifeArc. Calculate your precise age, track family milestones, and uncover insights like your life-path number. All private.";
 
         switch (currentPage) {
             case 'tools':
@@ -77,11 +77,11 @@ const App: React.FC = () => {
                     const article = articles.find(a => a.slug === activeArticleSlug);
                     if (article) {
                         title = `${article.title} | LifeArc Blog`;
-                        description = article.summary;
+                        description = article.summary.length > 160 ? article.summary.substring(0, 157) + '...' : article.summary;
                     }
                 } else {
                     title = 'LifeArc Blog | In-depth Articles on Time & Numerology';
-                    description = 'Explore articles on time perception, numerology, genealogy, and the psychology of personal history from our team of experts at the LifeArc blog.';
+                    description = 'Explore articles on time perception, numerology, genealogy, and personal history from our team of experts at the LifeArc blog.';
                 }
                 break;
             case 'about':

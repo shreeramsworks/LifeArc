@@ -50,10 +50,10 @@ const AgeGapCard: React.FC<AgeGapCardProps> = ({ family }) => {
         <Card title="Age Gap">
             <div className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
-                    <select value={personA} onChange={e => setPersonA(e.target.value)} className="w-full p-3 bg-gray-900 border border-gray-600 rounded-md" disabled={familyOptions.length === 0}>
+                    <select aria-label="Select first person for comparison" value={personA} onChange={e => setPersonA(e.target.value)} className="w-full p-3 bg-gray-900 border border-gray-600 rounded-md" disabled={familyOptions.length === 0}>
                         {familyOptions.map(p => <option key={p.id} value={p.id}>{p.name}</option>)}
                     </select>
-                    <select value={personB} onChange={e => setPersonB(e.target.value)} className="w-full p-3 bg-gray-900 border border-gray-600 rounded-md" disabled={familyOptions.length === 0}>
+                    <select aria-label="Select second person for comparison" value={personB} onChange={e => setPersonB(e.target.value)} className="w-full p-3 bg-gray-900 border border-gray-600 rounded-md" disabled={familyOptions.length === 0}>
                         {familyOptions.map(p => <option key={p.id} value={p.id}>{p.name}</option>)}
                     </select>
                 </div>

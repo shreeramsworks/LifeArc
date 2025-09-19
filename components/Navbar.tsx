@@ -18,7 +18,7 @@ const NavLink: React.FC<{
 }> = ({ isActive, href, onClick, children, className }) => {
     const baseClasses = "px-4 py-2 text-base font-medium rounded-md transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 focus-visible:ring-white";
     const activeClasses = "bg-white/10 text-white";
-    const inactiveClasses = "text-gray-400 hover:bg-white/10 hover:text-white";
+    const inactiveClasses = "text-gray-300 hover:bg-white/10 hover:text-white";
     return (
         <a 
             href={href} 
