@@ -60,9 +60,17 @@ const App: React.FC = () => {
                 element.setAttribute('content', content);
             }
         };
+        
+        const setCanonicalUrl = (url: string) => {
+            let element = document.querySelector("link[rel='canonical']") as HTMLLinkElement | null;
+            if (element) {
+                element.href = url;
+            }
+        };
 
-        const baseUrl = (document.querySelector("link[rel='canonical']")?.getAttribute('href') || 'https://lifearc.app/');
-        const pageUrl = baseUrl + window.location.hash;
+        const baseUrl = (document.querySelector("link[rel='canonical']")?.getAttribute('href') || 'https://lifearc.app/').split('#')[0];
+        const pageUrl = baseUrl + (window.location.hash || '');
+
 
         let title = 'LifeArc | Interactive Age Calculator & Personal Insights';
         let description = "Chart your universe with LifeArc. Calculate your precise age, track family milestones, and uncover personal insights. Secure, private, and all in your browser.";
@@ -118,6 +126,7 @@ const App: React.FC = () => {
         setMetaTag('property', 'og:url', pageUrl);
         setMetaTag('name', 'twitter:title', title);
         setMetaTag('name', 'twitter:description', description);
+        setCanonicalUrl(pageUrl);
 
     }, [currentPage, activeTool, activeArticleSlug]);
 

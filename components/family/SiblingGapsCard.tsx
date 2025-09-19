@@ -54,17 +54,21 @@ const SiblingGapsCard: React.FC<SiblingGapsCardProps> = ({ family }) => {
                     <div>
                         <p className="text-sm font-medium text-gray-300 mb-2">Select 2 or more members to compare:</p>
                         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
-                            {family.map(member => (
-                                <label key={member.id} className="flex items-center space-x-2 p-2 rounded-md bg-gray-900 border border-gray-700 cursor-pointer hover:bg-gray-700 transition-colors">
-                                    <input
-                                        type="checkbox"
-                                        checked={selectedIds.includes(member.id)}
-                                        onChange={() => handleSelectMember(member.id)}
-                                        className="h-4 w-4 rounded border-gray-600 bg-gray-800 text-blue-500 focus:ring-blue-500"
-                                    />
-                                    <span className="text-sm text-gray-300 truncate">{member.name}</span>
-                                </label>
-                            ))}
+                            {family.map(member => {
+                                const checkboxId = `compare-checkbox-${member.id}`;
+                                return (
+                                    <label key={member.id} htmlFor={checkboxId} className="flex items-center space-x-2 p-2 rounded-md bg-gray-900 border border-gray-700 cursor-pointer hover:bg-gray-700 transition-colors">
+                                        <input
+                                            type="checkbox"
+                                            id={checkboxId}
+                                            checked={selectedIds.includes(member.id)}
+                                            onChange={() => handleSelectMember(member.id)}
+                                            className="h-4 w-4 rounded border-gray-600 bg-gray-800 text-blue-500 focus:ring-blue-500"
+                                        />
+                                        <span className="text-sm text-gray-300 truncate">{member.name}</span>
+                                    </label>
+                                );
+                            })}
                         </div>
                     </div>
                     {selectedIds.length >= 2 ? (
