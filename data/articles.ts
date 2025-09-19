@@ -203,7 +203,7 @@ export const articles: Article[] = [
             React.createElement("h3", { className: "text-blue-400" }, "Step 3: Organize Your Findings"),
             React.createElement("p", null, "As you gather information, it's crucial to keep it organized. Digital tools are excellent for this. When you add a member to the LifeArc Family Tracker, you're creating a digital record that includes their name, relationship to you, and date of birth. This prevents confusion and helps you see the emerging patterns in your family's timeline."),
             React.createElement("h3", { className: "text-blue-400" }, "Step 4: Seek Out Records"),
-            React.createElement("p", null, "Once you've exhausted your family's knowledge, it's time to dig into historical records. Many of these are now available online through websites like Ancestry, FamilySearch, and national archives. Key records to look for include:"),
+            React.createElement("p", null, "Once you've exhausted your family's knowledge, it's time to dig into historical records. Many of these are now available online through websites like ", React.createElement("a", { href: "https://www.familysearch.org/", target: "_blank", rel: "noopener noreferrer", className: "text-blue-400 hover:underline" }, "FamilySearch"), ", Ancestry, and the ", React.createElement("a", { href: "https://www.archives.gov/", target: "_blank", rel: "noopener noreferrer", className: "text-blue-400 hover:underline" }, "National Archives"), ". Key records to look for include:"),
             React.createElement("ul", null,
                 React.createElement("li", null, "Census Records"),
                 React.createElement("li", null, "Birth, Marriage, and Death Certificates"),
@@ -245,7 +245,7 @@ export const articles: Article[] = [
         content: React.createElement("div", { className: "prose prose-invert max-w-none text-gray-300" },
             React.createElement("p", null, "In the world of personal wellness and time tracking, you might encounter two similar-sounding concepts: circadian rhythms and biorhythms. While both deal with cycles in our lives, one is a fundamental principle of biology, and the other is a speculative theory. Understanding the difference is key."),
             React.createElement("h3", { className: "text-blue-400" }, "Circadian Rhythms: The Science of Your Internal Clock"),
-            React.createElement("p", null, "Circadian rhythms are physical, mental, and behavioral changes that follow a roughly 24-hour cycle. These processes are a core part of biology, found in most living things, including animals, plants, and even tiny microbes. In humans, nearly every tissue and organ has its own biological clock, and these are synchronized by a master clock in the brain called the suprachiasmatic nucleus (SCN)."),
+            React.createElement("p", null, "Circadian rhythms are physical, mental, and behavioral changes that follow a roughly 24-hour cycle. These processes are a core part of biology, found in most living things, including animals, plants, and even tiny microbes. In humans, nearly every tissue and organ has its own biological clock, and these are synchronized by a master clock in the brain called the suprachiasmatic nucleus (SCN). You can learn more about this from the ", React.createElement("a", { href: "https://www.nigms.nih.gov/education/fact-sheets/circadian-rhythms", target: "_blank", rel: "noopener noreferrer", className: "text-blue-400 hover:underline" }, "National Institute of General Medical Sciences"), "."),
             React.createElement("p", null, "The most important factor influencing circadian rhythms is light. The SCN is highly sensitive to light signals from the eyes, which is why exposure to sunlight in the morning helps you wake up, and avoiding blue light at night helps you sleep. These rhythms control critical functions like:"),
             React.createElement("ul", null,
                 React.createElement("li", null, "The sleep-wake cycle"),
@@ -439,7 +439,7 @@ export const articles: Article[] = [
                 React.createElement("li", null, "He advanced the calendar by 10 days to realign it with the seasons."),
                 React.createElement("li", null, "He refined the leap year rule: a year is a leap year if it is divisible by 4, unless it is divisible by 100 but not by 400. (This is why 2000 was a leap year, but 1900 was not).")
             ),
-            React.createElement("p", null, "This Gregorian calendar is the system most of the world uses today, a testament to a long and fascinating quest for precision timekeeping.")
+            React.createElement("p", null, "This Gregorian calendar is the system most of the world uses today, a testament to a long and fascinating quest for precision timekeeping. You can read more about it on ", React.createElement("a", { href: "https://www.britannica.com/science/Gregorian-calendar", target: "_blank", rel: "noopener noreferrer", className: "text-blue-400 hover:underline" }, "Encyclopedia Britannica"), ".")
         )
     },
     {

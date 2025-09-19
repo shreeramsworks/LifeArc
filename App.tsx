@@ -98,7 +98,7 @@ const App: React.FC = () => {
             <div className="pt-16"> {/* Adjust padding for fixed navbar height */}
                 {renderPage()}
             </div>
-            <Footer onNavigate={handleNavigate} />
+            <Footer currentPage={currentPage} onNavigate={handleNavigate} />
         </div>
     );
 };

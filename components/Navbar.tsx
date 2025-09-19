@@ -9,19 +9,25 @@ interface NavbarProps {
     onNavigate: (page: Page, options?: Tool | string) => void;
 }
 
-const NavButton: React.FC<{
+const NavLink: React.FC<{
     isActive: boolean;
+    href: string;
     onClick: () => void;
     children: React.ReactNode;
     className?: string;
-}> = ({ isActive, onClick, children, className }) => {
+}> = ({ isActive, href, onClick, children, className }) => {
     const baseClasses = "px-4 py-2 text-base font-medium rounded-md transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 focus-visible:ring-white";
     const activeClasses = "bg-white/10 text-white";
     const inactiveClasses = "text-gray-400 hover:bg-white/10 hover:text-white";
     return (
-        <button onClick={onClick} className={`${baseClasses} ${isActive ? activeClasses : inactiveClasses} ${className}`}>
+        <a 
+            href={href} 
+            onClick={(e) => { e.preventDefault(); onClick(); }} 
+            className={`${baseClasses} ${isActive ? activeClasses : inactiveClasses} ${className}`}
+            aria-current={isActive ? 'page' : undefined}
+        >
             {children}
-        </button>
+        </a>
     );
 };
 
@@ -36,44 +42,49 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, activeTool, onNavigate }) 
     return (
         <header className="bg-gray-900/80 backdrop-blur-sm shadow-md fixed top-0 left-0 right-0 z-50 h-16 border-b border-gray-800">
             <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
-                <div className="flex items-center gap-2 cursor-pointer" onClick={() => onNavigate('home')}>
+                <a href="#home" onClick={(e) => {e.preventDefault(); onNavigate('home')}} className="flex items-center gap-2 cursor-pointer">
                     <i className="fa-solid fa-hourglass-half text-blue-400 text-2xl" aria-label="LifeArc App Logo - Hourglass"></i>
                     <h1 className="text-xl font-bold text-white">LifeArc</h1>
-                </div>
+                </a>
                 <div className="hidden sm:flex items-center space-x-2">
-                    <NavButton isActive={currentPage === 'home'} onClick={() => onNavigate('home')}>
+                    <NavLink isActive={currentPage === 'home'} href="#home" onClick={() => onNavigate('home')}>
                         Home
-                    </NavButton>
-                    <NavButton
+                    </NavLink>
+                    <NavLink
                         isActive={currentPage === 'tools' && activeTool === 'ageCalculator'}
+                        href="#tools/ageCalculator"
                         onClick={() => onNavigate('tools', 'ageCalculator')}
                     >
                         Age Calculator
-                    </NavButton>
-                     <NavButton
+                    </NavLink>
+                     <NavLink
                         isActive={currentPage === 'tools' && activeTool === 'familyTracker'}
+                        href="#tools/familyTracker"
                         onClick={() => onNavigate('tools', 'familyTracker')}
                     >
                         Family Tracker
-                    </NavButton>
-                     <NavButton
+                    </NavLink>
+                     <NavLink
                         isActive={currentPage === 'insights'}
+                        href="#insights"
                         onClick={() => onNavigate('insights')}
                     >
                         Chrono Insights
-                    </NavButton>
-                    <NavButton
+                    </NavLink>
+                    <NavLink
                         isActive={currentPage === 'blog'}
+                        href="#blog"
                         onClick={() => onNavigate('blog')}
                     >
                         Blog
-                    </NavButton>
-                    <NavButton
+                    </NavLink>
+                    <NavLink
                         isActive={currentPage === 'about'}
+                        href="#about"
                         onClick={() => onNavigate('about')}
                     >
                         About Us
-                    </NavButton>
+                    </NavLink>
                 </div>
                 <div className="sm:hidden relative">
                      <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-gray-300 hover:text-white p-2 rounded-md" aria-label="Toggle mobile menu" aria-expanded={isMobileMenuOpen}>

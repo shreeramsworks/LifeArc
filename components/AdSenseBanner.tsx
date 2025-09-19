@@ -29,7 +29,7 @@ const AdSenseBanner: React.FC = () => {
                      // 3. Copy the 'data-ad-slot' value and paste it here.
                      // Your application will be REJECTED if you do not do this.
                      // ===================================================================
-                     data-ad-slot="0000000000"
+                     data-ad-slot="7793090764"
                      data-ad-format="auto"
                      data-full-width-responsive="true"></ins>
             </div>
