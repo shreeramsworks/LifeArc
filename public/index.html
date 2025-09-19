@@ -23,7 +23,7 @@
     <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⏳</text></svg>">
 
     <script defer src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
     
   <script type="importmap">
 {
@@ -112,8 +112,8 @@
 </head>
   <body class="bg-gray-900 text-gray-200">
     <noscript>
-      <h1>LifeArc: The Interactive Age Calculator & Personal Insights App</h1>
-      <p>Please enable JavaScript to use LifeArc. Discover your life in real-time with LifeArc. Calculate your precise age, track your family's legacy, and uncover personal insights like your biorhythm and life-path number. Chart your universe.</p>
+      <div style="padding: 2rem; text-align: center; font-size: 1.5rem; font-weight: bold;">LifeArc: The Interactive Age Calculator & Personal Insights App</div>
+      <p style="text-align: center;">Please enable JavaScript to use LifeArc. Discover your life in real-time with LifeArc. Calculate your precise age, track your family's legacy, and uncover personal insights like your biorhythm and life-path number. Chart your universe.</p>
     </noscript>
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
