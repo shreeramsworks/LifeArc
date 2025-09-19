@@ -56,7 +56,7 @@ const HistoricalEventsCard: React.FC<HistoricalEventsCardProps> = ({ dob }) => {
                     onChange={(e) => setQuery(e.target.value)}
                     placeholder={`Search in "${activeCategory}"...`}
                     aria-label="Search for historical events"
-                    className="w-full p-3 bg-gray-900 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full p-3 bg-gray-900 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 placeholder:text-gray-400"
                 />
                 
                 <div className="max-h-96 overflow-y-auto pr-2">

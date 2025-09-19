@@ -54,9 +54,15 @@ const App: React.FC = () => {
 
     // SEO: Dynamically update title and meta description
     useEffect(() => {
-        const metaDescriptionTag = document.querySelector('meta[name="description"]');
+        const setMetaTag = (propType: 'name' | 'property', propValue: string, content: string) => {
+            let element = document.querySelector(`meta[${propType}='${propValue}']`) as HTMLMetaElement | null;
+            if (element) {
+                element.setAttribute('content', content);
+            }
+        };
+
         let title = 'LifeArc | Interactive Age Calculator & Personal Insights';
-        let description = "Explore your personal universe with LifeArc. Calculate your precise age, track family milestones, and uncover insights like your life-path number. All private.";
+        let description = "Chart your universe with LifeArc. Calculate your precise age, track family milestones, and uncover personal insights. Secure, private, and all in your browser.";
 
         switch (currentPage) {
             case 'tools':
@@ -70,14 +76,14 @@ const App: React.FC = () => {
                 break;
             case 'insights':
                 title = 'Chrono Insights | LifeArc';
-                description = 'Discover the hidden patterns of your life. Explore your biorhythm, find your life-path number, and see how old you were during major historical events.';
+                description = 'Discover hidden patterns in your life. Explore biorhythms, find your life-path number, and see your age during major historical events with LifeArc.';
                 break;
             case 'blog':
                 if (activeArticleSlug) {
                     const article = articles.find(a => a.slug === activeArticleSlug);
                     if (article) {
                         title = `${article.title} | LifeArc Blog`;
-                        description = article.summary.length > 160 ? article.summary.substring(0, 157) + '...' : article.summary;
+                        description = article.summary.length > 155 ? article.summary.substring(0, 152) + '...' : article.summary;
                     }
                 } else {
                     title = 'LifeArc Blog | In-depth Articles on Time & Numerology';
@@ -103,9 +109,12 @@ const App: React.FC = () => {
         }
 
         document.title = title;
-        if (metaDescriptionTag) {
-            metaDescriptionTag.setAttribute('content', description);
-        }
+        setMetaTag('name', 'description', description);
+        setMetaTag('property', 'og:title', title);
+        setMetaTag('property', 'og:description', description);
+        setMetaTag('name', 'twitter:title', title);
+        setMetaTag('name', 'twitter:description', description);
+
     }, [currentPage, activeTool, activeArticleSlug]);
 
     const handleNavigate = (page: Page, options?: Tool | string) => {

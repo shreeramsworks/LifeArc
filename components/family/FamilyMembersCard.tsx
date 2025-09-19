@@ -111,7 +111,7 @@ const AddMemberModal: React.FC<{
                     {relation === 'Other' && (
                          <div>
                             <label htmlFor="custom_relation" className="block text-sm font-medium text-gray-300">Custom Relation</label>
-                            <input type="text" id="custom_relation" value={customRelation} onChange={e => setCustomRelation(e.target.value)} required placeholder="e.g., Godparent" className="w-full mt-1 p-2 bg-gray-900 border border-gray-600 rounded-md"/>
+                            <input type="text" id="custom_relation" value={customRelation} onChange={e => setCustomRelation(e.target.value)} required placeholder="e.g., Godparent" className="w-full mt-1 p-2 bg-gray-900 border border-gray-600 rounded-md placeholder:text-gray-400"/>
                         </div>
                     )}
                     <div className="grid grid-cols-2 gap-4">

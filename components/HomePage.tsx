@@ -252,7 +252,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                                     onChange={(e) => setNewReview({ ...newReview, name: e.target.value })}
                                     placeholder="e.g., Jane Doe"
                                     required 
-                                    className="w-full mt-1 p-3 bg-gray-900 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" 
+                                    className="w-full mt-1 p-3 bg-gray-900 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 placeholder:text-gray-400" 
                                 />
                              </div>
                              <div>
@@ -264,7 +264,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                                     onChange={(e) => setNewReview({ ...newReview, quote: e.target.value })}
                                     placeholder="Tell us what you think..."
                                     required 
-                                    className="w-full mt-1 p-3 bg-gray-900 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                                    className="w-full mt-1 p-3 bg-gray-900 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 placeholder:text-gray-400"
                                 ></textarea>
                              </div>
                              <button type="submit" className="w-full bg-blue-600 text-white font-bold py-3 px-8 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-200 disabled:bg-gray-600">
