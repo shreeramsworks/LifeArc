@@ -46,12 +46,12 @@ const LiveMiniCalculator: React.FC = () => {
             {age && (
                 <div className="mt-6 p-4 bg-gray-900/80 backdrop-blur-sm rounded-lg shadow-inner border border-gray-700">
                     <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 text-center">
-                        <div><div className="text-3xl font-bold text-blue-400">{age.years}</div><div className="text-xs text-gray-400">Years</div></div>
-                        <div><div className="text-3xl font-bold text-blue-400">{age.months}</div><div className="text-xs text-gray-400">Months</div></div>
-                        <div><div className="text-3xl font-bold text-blue-400">{age.days}</div><div className="text-xs text-gray-400">Days</div></div>
-                        <div><div className="text-3xl font-bold text-blue-400">{age.hours}</div><div className="text-xs text-gray-400">Hours</div></div>
-                        <div><div className="text-3xl font-bold text-blue-400">{age.minutes}</div><div className="text-xs text-gray-400">Mins</div></div>
-                        <div><div className="text-3xl font-bold text-blue-400">{age.seconds}</div><div className="text-xs text-gray-400">Secs</div></div>
+                        <div><div className="text-3xl font-bold text-blue-400">{age.years}</div><div className="text-xs text-gray-300">Years</div></div>
+                        <div><div className="text-3xl font-bold text-blue-400">{age.months}</div><div className="text-xs text-gray-300">Months</div></div>
+                        <div><div className="text-3xl font-bold text-blue-400">{age.days}</div><div className="text-xs text-gray-300">Days</div></div>
+                        <div><div className="text-3xl font-bold text-blue-400">{age.hours}</div><div className="text-xs text-gray-300">Hours</div></div>
+                        <div><div className="text-3xl font-bold text-blue-400">{age.minutes}</div><div className="text-xs text-gray-300">Mins</div></div>
+                        <div><div className="text-3xl font-bold text-blue-400">{age.seconds}</div><div className="text-xs text-gray-300">Secs</div></div>
                     </div>
                 </div>
             )}
@@ -129,10 +129,10 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             {/* Hero Section */}
             <section className="text-center max-w-3xl mx-auto py-20 sm:py-24 px-4">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white">
-                    LifeArc: The <span className="text-blue-500">Interactive Age Calculator</span> & Personal Insights App
+                    LifeArc: Chart Your Personal Universe
                 </h1>
-                <p className="mt-6 text-lg sm:text-xl text-gray-400">
-                    Enter your birthday to see your life unfold in real-time, then explore our instruments to chart your entire personal journey.
+                <p className="mt-6 text-lg sm:text-xl text-gray-300">
+                    Enter your birthday to see your life unfold in real-time, then explore our instruments to chart your entire personal journey, securely and privately.
                 </p>
                 <LiveMiniCalculator />
                 <button
@@ -144,7 +144,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             </section>
 
             {/* "Explore Your Universe" Showcase Section */}
-            <section id="tools-showcase" className="max-w-6xl mx-auto">
+            <section id="tools-showcase" className="max-w-6xl mx-auto px-4">
                  <h2 className="text-3xl font-bold text-center text-white mb-12">Chart Your Life with Our Live Age Counter, Family Tracker & Numerology Tools</h2>
                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                      <div className="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 text-center flex flex-col items-center">
@@ -167,11 +167,32 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                      </div>
                  </div>
             </section>
+            
+            {/* Why Choose LifeArc Section */}
+            <section id="why-lifearc" className="max-w-6xl mx-auto px-4">
+                <h2 className="text-3xl font-bold text-center text-white mb-12">Why Choose LifeArc?</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                    <div className="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700">
+                        <i className="fa-solid fa-shield-halved text-5xl text-green-400 mb-4"></i>
+                        <h3 className="text-2xl font-bold text-white mb-2">Privacy by Design</h3>
+                        <p className="text-gray-300">
+                            In an era where data is a commodity, LifeArc operates on a simple, powerful principle: your data is yours alone. All calculations are performed directly in your browser, and no personal information—not your birthday, not your family members' details—is ever sent to or stored on our servers. You can explore your personal universe with the absolute certainty that your information remains completely private and under your control.
+                        </p>
+                    </div>
+                    <div className="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700">
+                        <i className="fa-solid fa-crosshairs text-5xl text-cyan-400 mb-4"></i>
+                        <h3 className="text-2xl font-bold text-white mb-2">Unmatched Precision</h3>
+                        <p className="text-gray-300">
+                            Accuracy matters. Many online calculators have errors due to timezones and daylight saving. LifeArc is built differently. We use the Julian Day Number (JDN) system, an astronomical standard for timekeeping that eliminates these ambiguities. This ensures that every calculation, from your age in seconds to your biorhythm chart, is based on the most precise and reliable method available, giving you insights you can trust.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
             <AdSenseBanner />
 
             {/* Testimonials Carousel Section */}
-            <section className="max-w-4xl mx-auto text-center">
+            <section className="max-w-4xl mx-auto text-center px-4">
                 <h2 className="text-3xl font-bold text-white mb-10">What Our Users Are Saying...</h2>
                 <div className="relative bg-gray-800 border border-gray-700 p-8 rounded-lg overflow-hidden min-h-[250px] flex items-center justify-center">
                      {testimonials.map((t, index) => (
@@ -190,7 +211,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             </section>
 
              {/* Add Review Section */}
-            <section id="add-review" className="max-w-3xl mx-auto bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 min-h-[510px] flex items-center justify-center">
+            <section id="add-review" className="max-w-3xl mx-auto bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 min-h-[510px] flex items-center justify-center px-4">
                  {isReviewSubmitted ? (
                     <div className="text-center text-white transition-opacity duration-500">
                         <i className="fa-solid fa-check-circle text-5xl text-green-400 mb-4"></i>

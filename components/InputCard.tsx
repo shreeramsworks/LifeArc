@@ -62,7 +62,7 @@ const InputCard: React.FC<InputCardProps> = ({
                             <option key={tz} value={tz}>{tz.replace(/_/g, ' ')}</option>
                         ))}
                     </select>
-                     <p className="text-xs text-gray-400 mt-2">
+                     <p className="text-xs text-gray-300 mt-2">
                         Note: The date/time you enter is parsed using your browser's current timezone. This selection primarily affects the World Clock display. For full historical accuracy, a specialized timezone library is required.
                     </p>
                 </div>

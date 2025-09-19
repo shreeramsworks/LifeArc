@@ -19,7 +19,7 @@ const FooterLink: React.FC<{
         <a 
             href={`#${page}`}
             onClick={(e) => { e.preventDefault(); onNavigate(page); }} 
-            className="hover:text-gray-300 hover:underline transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
+            className="text-gray-300 hover:text-white hover:underline transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
             aria-current={isActive ? 'page' : undefined}
         >
             {children}
@@ -30,7 +30,7 @@ const FooterLink: React.FC<{
 
 const Footer: React.FC<FooterProps> = ({ currentPage, onNavigate }) => {
     return (
-        <footer className="text-center text-sm text-gray-400 py-8 border-t border-gray-800 mt-16">
+        <footer className="text-center text-sm text-gray-300 py-8 border-t border-gray-800 mt-16">
             <div className="max-w-3xl mx-auto space-y-4 px-4">
                  <div className="flex justify-center items-center flex-wrap gap-x-6 gap-y-2">
                     <FooterLink page="about" currentPage={currentPage} onNavigate={onNavigate}>About Us</FooterLink>
@@ -39,7 +39,7 @@ const Footer: React.FC<FooterProps> = ({ currentPage, onNavigate }) => {
                     <FooterLink page="privacy" currentPage={currentPage} onNavigate={onNavigate}>Privacy Policy</FooterLink>
                     <FooterLink page="terms" currentPage={currentPage} onNavigate={onNavigate}>Terms of Service</FooterLink>
                 </div>
-                <p className="pt-4 text-gray-400">
+                <p className="pt-4 text-gray-300">
                    &copy; {new Date().getFullYear()} LifeArc. All calculations and data are processed in your browser.
                 </p>
             </div>

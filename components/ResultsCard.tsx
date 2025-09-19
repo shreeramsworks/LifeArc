@@ -11,7 +11,7 @@ interface ResultsCardProps {
 
 const StatBox: React.FC<{ label: string; value: string; className?: string }> = ({ label, value, className }) => (
     <div className={`bg-gray-900 border border-gray-700 p-4 rounded-lg text-center ${className}`}>
-        <p className="text-sm text-gray-400">{label}</p>
+        <p className="text-sm text-gray-300">{label}</p>
         <p className="text-2xl font-bold text-blue-400">{value}</p>
     </div>
 );
@@ -35,7 +35,7 @@ const ResultsCard: React.FC<ResultsCardProps> = ({ ageData, ageSystem, setAgeSys
         <div className="text-center p-6 bg-gray-900 border border-gray-700 rounded-lg">
             <p className="text-lg text-gray-300">In the East Asian system, your age is</p>
             <p className="text-6xl font-extrabold text-blue-400 my-2">{numberFormatter.format(ageData.eastAsianAge)}</p>
-            <p className="text-sm text-gray-400">This system counts the year of birth as year one.</p>
+            <p className="text-sm text-gray-300">This system counts the year of birth as year one.</p>
         </div>
     );
 
@@ -73,7 +73,7 @@ const ResultsCard: React.FC<ResultsCardProps> = ({ ageData, ageSystem, setAgeSys
 
              <div className="pt-4 border-t border-gray-700">
                 <h3 className="text-lg font-semibold text-gray-300 mb-2 text-center">Next Birthday Countdown</h3>
-                <p className="text-center text-gray-400 text-sm mb-4">
+                <p className="text-center text-gray-300 text-sm mb-4">
                     {nextBirthdayData.date.toLocaleDateString(locale, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">

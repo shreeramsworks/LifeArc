@@ -44,7 +44,7 @@ const CurrentTimeCard: React.FC<CurrentTimeCardProps> = ({ now, locale, timezone
                 </div>
                 <div className="text-center sm:text-right bg-gray-900 p-3 rounded-lg border border-gray-700">
                     <p className="font-medium text-gray-200">{timezoneString}</p>
-                    <p className="text-sm text-gray-400">{timezone.replace(/_/g, ' ')} ({utcOffset})</p>
+                    <p className="text-sm text-gray-300">{timezone.replace(/_/g, ' ')} ({utcOffset})</p>
                 </div>
             </div>
         </div>

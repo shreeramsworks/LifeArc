@@ -52,6 +52,62 @@ const App: React.FC = () => {
         return () => window.removeEventListener('hashchange', getPageFromHash);
     }, []);
 
+    // SEO: Dynamically update title and meta description
+    useEffect(() => {
+        const metaDescriptionTag = document.querySelector('meta[name="description"]');
+        let title = 'LifeArc | Interactive Age Calculator & Personal Insights';
+        let description = "Discover your life in real-time with LifeArc. Calculate your precise age, track your family's legacy, and uncover personal insights like your biorhythm and life-path number.";
+
+        switch (currentPage) {
+            case 'tools':
+                if (activeTool === 'familyTracker') {
+                    title = 'Family Tracker | LifeArc';
+                    description = 'Build a private family timeline. Track live ages, discover statistics, visualize generational gaps, and never miss a milestone with LifeArc.';
+                } else {
+                    title = 'Precision Age Calculator | LifeArc';
+                    description = 'Calculate your age down to the second, countdown to your next birthday, and see your birth moment around the world with unmatched precision.';
+                }
+                break;
+            case 'insights':
+                title = 'Chrono Insights | LifeArc';
+                description = 'Discover the hidden patterns of your life. Explore your biorhythm, find your life-path number, and see how old you were during major historical events.';
+                break;
+            case 'blog':
+                if (activeArticleSlug) {
+                    const article = articles.find(a => a.slug === activeArticleSlug);
+                    if (article) {
+                        title = `${article.title} | LifeArc Blog`;
+                        description = article.summary;
+                    }
+                } else {
+                    title = 'LifeArc Blog | In-depth Articles on Time & Numerology';
+                    description = 'Explore in-depth articles on time perception, the history of the calendar, numerology, genealogy, and the psychology of personal history from our team of experts.';
+                }
+                break;
+            case 'about':
+                title = 'About Us | LifeArc';
+                description = 'Learn about the mission and privacy-first philosophy behind LifeArc. Meet the team dedicated to helping you chart your personal universe securely.';
+                break;
+            case 'contact':
+                title = 'Contact Us | LifeArc';
+                description = 'Have questions, feedback, or suggestions for LifeArc? We would love to hear from you. Get in touch with our support team.';
+                break;
+            case 'privacy':
+                title = 'Privacy Policy | LifeArc';
+                description = 'Review the LifeArc privacy policy. We are committed to a privacy-by-design approach where your data is never stored on our servers.';
+                break;
+            case 'terms':
+                title = 'Terms of Service | LifeArc';
+                description = 'Read the terms of service for using the LifeArc application and its suite of tools.';
+                break;
+        }
+
+        document.title = title;
+        if (metaDescriptionTag) {
+            metaDescriptionTag.setAttribute('content', description);
+        }
+    }, [currentPage, activeTool, activeArticleSlug]);
+
     const handleNavigate = (page: Page, options?: Tool | string) => {
         let newHash = `#${page}`;
         if ((page === 'tools' || page === 'blog') && options) {
