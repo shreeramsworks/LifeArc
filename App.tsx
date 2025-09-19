@@ -61,6 +61,9 @@ const App: React.FC = () => {
             }
         };
 
+        const baseUrl = (document.querySelector("link[rel='canonical']")?.getAttribute('href') || 'https://lifearc.app/');
+        const pageUrl = baseUrl + window.location.hash;
+
         let title = 'LifeArc | Interactive Age Calculator & Personal Insights';
         let description = "Chart your universe with LifeArc. Calculate your precise age, track family milestones, and uncover personal insights. Secure, private, and all in your browser.";
 
@@ -112,6 +115,7 @@ const App: React.FC = () => {
         setMetaTag('name', 'description', description);
         setMetaTag('property', 'og:title', title);
         setMetaTag('property', 'og:description', description);
+        setMetaTag('property', 'og:url', pageUrl);
         setMetaTag('name', 'twitter:title', title);
         setMetaTag('name', 'twitter:description', description);
 
