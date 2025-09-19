@@ -22,7 +22,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ article, onNavigateBack }) 
                         <h1 className="text-3xl sm:text-4xl font-extrabold text-white">
                             {article.title}
                         </h1>
-                        <div className="mt-4 text-sm text-gray-500">
+                        <div className="mt-4 text-sm text-gray-400">
                             <span>By {article.author.name}</span> | <span suppressHydrationWarning>{new Date(article.publishDate + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                         </div>
                     </header>

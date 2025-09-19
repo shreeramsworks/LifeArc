@@ -30,7 +30,7 @@ const FooterLink: React.FC<{
 
 const Footer: React.FC<FooterProps> = ({ currentPage, onNavigate }) => {
     return (
-        <footer className="text-center text-sm text-gray-500 py-8 border-t border-gray-800 mt-16">
+        <footer className="text-center text-sm text-gray-400 py-8 border-t border-gray-800 mt-16">
             <div className="max-w-3xl mx-auto space-y-4 px-4">
                  <div className="flex justify-center items-center flex-wrap gap-x-6 gap-y-2">
                     <FooterLink page="about" currentPage={currentPage} onNavigate={onNavigate}>About Us</FooterLink>

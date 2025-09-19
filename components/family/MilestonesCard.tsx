@@ -143,10 +143,10 @@ const MilestonesCard: React.FC<MilestonesCardProps> = ({ now, family }) => {
                                    </div>
                                </div>
                                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3 text-center">
-                                    <div className="bg-gray-800 p-2 rounded border border-gray-700"><span className="font-bold text-blue-400">{m.countdown.days}</span><span className="text-xs text-gray-400"> days</span></div>
-                                    <div className="bg-gray-800 p-2 rounded border border-gray-700"><span className="font-bold text-blue-400">{m.countdown.hours}</span><span className="text-xs text-gray-400"> hours</span></div>
-                                    <div className="bg-gray-800 p-2 rounded border border-gray-700"><span className="font-bold text-blue-400">{m.countdown.minutes}</span><span className="text-xs text-gray-400"> mins</span></div>
-                                    <div className="bg-gray-800 p-2 rounded border border-gray-700"><span className="font-bold text-blue-400">{m.countdown.seconds}</span><span className="text-xs text-gray-400"> secs</span></div>
+                                    <div className="bg-gray-800 p-2 rounded border border-gray-700"><span className="font-bold text-blue-400">{m.countdown.days}</span><span className="text-xs text-gray-300"> days</span></div>
+                                    <div className="bg-gray-800 p-2 rounded border border-gray-700"><span className="font-bold text-blue-400">{m.countdown.hours}</span><span className="text-xs text-gray-300"> hours</span></div>
+                                    <div className="bg-gray-800 p-2 rounded border border-gray-700"><span className="font-bold text-blue-400">{m.countdown.minutes}</span><span className="text-xs text-gray-300"> mins</span></div>
+                                    <div className="bg-gray-800 p-2 rounded border border-gray-700"><span className="font-bold text-blue-400">{m.countdown.seconds}</span><span className="text-xs text-gray-300"> secs</span></div>
                                </div>
                             </div>
                         );

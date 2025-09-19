@@ -40,7 +40,7 @@ const CurrentTimeCard: React.FC<CurrentTimeCardProps> = ({ now, locale, timezone
                     <p className="text-4xl font-bold text-white tracking-tight">
                         {timeFormatter.format(now)}
                     </p>
-                    <p className="text-gray-400">{dateFormatter.format(now)}</p>
+                    <p className="text-gray-300">{dateFormatter.format(now)}</p>
                 </div>
                 <div className="text-center sm:text-right bg-gray-900 p-3 rounded-lg border border-gray-700">
                     <p className="font-medium text-gray-200">{timezoneString}</p>

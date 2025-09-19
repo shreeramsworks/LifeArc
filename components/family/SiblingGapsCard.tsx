@@ -84,7 +84,7 @@ const SiblingGapsCard: React.FC<SiblingGapsCardProps> = ({ family }) => {
                              )}
                         </div>
                     ): (
-                        <p className="text-center text-gray-500 pt-4">Please select at least two members to see results.</p>
+                        <p className="text-center text-gray-400 pt-4">Please select at least two members to see results.</p>
                      )}
                 </div>
             ) : (

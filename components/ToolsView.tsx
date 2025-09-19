@@ -14,7 +14,7 @@ const ToolsView: React.FC<ToolsViewProps> = ({ activeTool, setActiveTool }) => {
         const isActive = activeTool === tabId;
         const baseClasses = "py-3 px-4 sm:px-6 text-base sm:text-lg font-semibold transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900";
         const activeClasses = "border-b-2 border-blue-500 text-blue-400";
-        const inactiveClasses = "text-gray-500 hover:text-blue-500 hover:border-b-2 hover:border-gray-600";
+        const inactiveClasses = "text-gray-400 hover:text-blue-500 hover:border-b-2 hover:border-gray-600";
 
         return (
             <button

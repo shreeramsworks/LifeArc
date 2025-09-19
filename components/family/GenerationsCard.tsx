@@ -37,7 +37,7 @@ const GenerationsCard: React.FC<GenerationsCardProps> = ({ family }) => {
                         <div key={gen.name} className="group">
                             <div className="flex justify-between items-center mb-1 text-sm">
                                 <span className="font-bold text-gray-300">{gen.name}</span>
-                                <span className="text-gray-400">{gen.count} member{gen.count > 1 ? 's' : ''} (Avg: {gen.avgAge.toFixed(1)} yrs)</span>
+                                <span className="text-gray-300">{gen.count} member{gen.count > 1 ? 's' : ''} (Avg: {gen.avgAge.toFixed(1)} yrs)</span>
                             </div>
                             <div className="relative bg-gray-700 rounded-full h-6 overflow-hidden">
                                 <div

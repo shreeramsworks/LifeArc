@@ -8,7 +8,7 @@ const TermsOfServicePage: React.FC = () => {
                     <h1 className="text-4xl sm:text-5xl font-bold text-white">
                         Terms of Service
                     </h1>
-                    <p className="mt-2 text-lg text-gray-400">
+                    <p className="mt-2 text-lg text-gray-300">
                         Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
                     </p>
                 </header>

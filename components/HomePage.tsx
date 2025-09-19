@@ -39,6 +39,7 @@ const LiveMiniCalculator: React.FC = () => {
         <div className="mt-8 max-w-xl mx-auto">
             <input
                 type="date"
+                aria-label="Enter your date of birth to see your age update in real-time"
                 onChange={(e) => setDob(e.target.value)}
                 className="w-full p-4 bg-gray-800/80 backdrop-blur-sm border border-gray-600 text-gray-200 rounded-lg shadow-sm text-lg focus:ring-blue-500 focus:border-blue-500"
             />
@@ -149,19 +150,19 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                      <div className="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 text-center flex flex-col items-center">
                         <i className="fa-solid fa-calculator text-5xl text-blue-400 mb-4" aria-hidden="true"></i>
                         <h3 className="text-2xl font-bold text-white mb-2">Precision Timing</h3>
-                        <p className="text-gray-400 flex-grow">Go beyond years. See your age down to the second, countdown to your next birthday, and explore your birth moment across the globe.</p>
+                        <p className="text-gray-300 flex-grow">Go beyond years. See your age down to the second, countdown to your next birthday, and explore your birth moment across the globe.</p>
                         <button onClick={() => onNavigate('tools', 'ageCalculator')} className="mt-6 bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">Launch Instrument</button>
                      </div>
                      <div className="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 text-center flex flex-col items-center">
                         <i className="fa-solid fa-users-line text-5xl text-blue-400 mb-4" aria-hidden="true"></i>
                         <h3 className="text-2xl font-bold text-white mb-2">Family Legacy</h3>
-                        <p className="text-gray-400 flex-grow">Build a private family timeline. Track live ages, discover statistics, visualize generational gaps, and never miss a milestone.</p>
+                        <p className="text-gray-300 flex-grow">Build a private family timeline. Track live ages, discover statistics, visualize generational gaps, and never miss a milestone.</p>
                         <button onClick={() => onNavigate('tools', 'familyTracker')} className="mt-6 bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">Launch Instrument</button>
                      </div>
                       <div className="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 text-center flex flex-col items-center">
                         <i className="fa-solid fa-star-of-life text-5xl text-blue-400 mb-4" aria-hidden="true"></i>
                         <h3 className="text-2xl font-bold text-white mb-2">Personal Insights</h3>
-                        <p className="text-gray-400 flex-grow">Discover the hidden patterns of your life. Explore biorhythms, find your life-path number, and predict days of high intuition.</p>
+                        <p className="text-gray-300 flex-grow">Discover the hidden patterns of your life. Explore biorhythms, find your life-path number, and predict days of high intuition.</p>
                         <button onClick={() => onNavigate('insights')} className="mt-6 bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">Launch Instrument</button>
                      </div>
                  </div>
@@ -180,8 +181,8 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                             <cite className="block font-semibold text-blue-400 mt-4">- {t.name}</cite>
                         </div>
                      ))}
-                     <button onClick={() => setCurrentTestimonial(p => p === 0 ? testimonials.length - 1 : p - 1)} className="absolute left-2 top-1/2 -translate-y-1/2 bg-gray-900/50 hover:bg-gray-900 rounded-full h-10 w-10 flex items-center justify-center shadow-md"><i className="fa-solid fa-chevron-left text-gray-300"></i></button>
-                     <button onClick={() => setCurrentTestimonial(p => p === testimonials.length - 1 ? 0 : p + 1)} className="absolute right-2 top-1/2 -translate-y-1/2 bg-gray-900/50 hover:bg-gray-900 rounded-full h-10 w-10 flex items-center justify-center shadow-md"><i className="fa-solid fa-chevron-right text-gray-300"></i></button>
+                     <button aria-label="Previous testimonial" onClick={() => setCurrentTestimonial(p => p === 0 ? testimonials.length - 1 : p - 1)} className="absolute left-2 top-1/2 -translate-y-1/2 bg-gray-900/50 hover:bg-gray-900 rounded-full h-10 w-10 flex items-center justify-center shadow-md"><i className="fa-solid fa-chevron-left text-gray-300"></i></button>
+                     <button aria-label="Next testimonial" onClick={() => setCurrentTestimonial(p => p === testimonials.length - 1 ? 0 : p + 1)} className="absolute right-2 top-1/2 -translate-y-1/2 bg-gray-900/50 hover:bg-gray-900 rounded-full h-10 w-10 flex items-center justify-center shadow-md"><i className="fa-solid fa-chevron-right text-gray-300"></i></button>
                 </div>
                  <button onClick={scrollToReview} className="mt-6 text-blue-500 font-semibold hover:underline">
                     You could be next! Share your story.
@@ -194,7 +195,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                     <div className="text-center text-white transition-opacity duration-500">
                         <i className="fa-solid fa-check-circle text-5xl text-green-400 mb-4"></i>
                         <h2 className="text-3xl font-bold">Thank You!</h2>
-                        <p className="text-gray-400 mt-2">Your review has been submitted successfully.</p>
+                        <p className="text-gray-300 mt-2">Your review has been submitted successfully.</p>
                     </div>
                 ) : (
                     <div className="w-full">

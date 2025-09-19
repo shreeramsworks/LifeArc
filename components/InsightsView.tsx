@@ -53,7 +53,7 @@ const InsightsView: React.FC = () => {
         if (!dob) {
             return (
                 <div className="text-center p-10 bg-gray-800 rounded-lg border border-gray-700">
-                    <p className="text-lg text-gray-400">Please enter your date of birth to begin exploring your Chrono Insights.</p>
+                    <p className="text-lg text-gray-300">Please enter your date of birth to begin exploring your Chrono Insights.</p>
                 </div>
             );
         }

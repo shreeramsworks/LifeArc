@@ -57,7 +57,7 @@ const StatPill: React.FC<{
         >
             <p className="text-sm text-gray-400">{label}</p>
             <p className="text-2xl font-bold text-blue-400">{displayValue.toFixed(1)} yrs</p>
-            {name && <p className="text-xs text-gray-500 truncate">({name})</p>}
+            {name && <p className="text-xs text-gray-400 truncate">({name})</p>}
         </div>
     );
 };

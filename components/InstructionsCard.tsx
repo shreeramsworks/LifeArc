@@ -12,7 +12,7 @@ const InstructionsCard: React.FC<InstructionsCardProps> = ({ title, steps }) => 
                 <i className="fa-solid fa-circle-info"></i>
                 {title}
             </h3>
-            <ol className="list-decimal list-inside space-y-2 text-gray-400 pl-2">
+            <ol className="list-decimal list-inside space-y-2 text-gray-300 pl-2">
                 {steps.map((step, index) => (
                     <li key={index}>{step}</li>
                 ))}

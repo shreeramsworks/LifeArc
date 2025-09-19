@@ -24,10 +24,10 @@ const BlogIndexPage: React.FC<BlogIndexPageProps> = ({ onNavigate }) => {
                             <h2 className="text-2xl sm:text-3xl font-bold text-blue-400">
                                 {article.title}
                             </h2>
-                            <p className="mt-4 text-gray-400">
+                            <p className="mt-4 text-gray-300">
                                 {article.summary}
                             </p>
-                            <div className="mt-4 text-sm text-gray-500">
+                            <div className="mt-4 text-sm text-gray-400">
                                 <span>By {article.author.name}</span> | <span suppressHydrationWarning>{new Date(article.publishDate + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                             </div>
                             <button

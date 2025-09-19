@@ -8,7 +8,7 @@ const ContactUsPage: React.FC = () => {
                     <h1 className="text-4xl sm:text-5xl font-bold text-white">
                         Contact Us
                     </h1>
-                    <p className="mt-2 text-lg text-gray-400">
+                    <p className="mt-2 text-lg text-gray-300">
                         We'd love to hear from you.
                     </p>
                 </header>
@@ -26,7 +26,7 @@ const ContactUsPage: React.FC = () => {
                         </a>
                     </div>
 
-                    <p className="mt-8 text-gray-400">We do our best to respond to all emails within 48 business hours. Thank you for your interest in LifeArc!</p>
+                    <p className="mt-8 text-gray-300">We do our best to respond to all emails within 48 business hours. Thank you for your interest in LifeArc!</p>
                 </div>
             </main>
         </div>

@@ -35,50 +35,52 @@ const ResultsCard: React.FC<ResultsCardProps> = ({ ageData, ageSystem, setAgeSys
         <div className="text-center p-6 bg-gray-900 border border-gray-700 rounded-lg">
             <p className="text-lg text-gray-300">In the East Asian system, your age is</p>
             <p className="text-6xl font-extrabold text-blue-400 my-2">{numberFormatter.format(ageData.eastAsianAge)}</p>
-            <p className="text-sm text-gray-500 max-w-md mx-auto">This system starts with 1 at birth, and everyone gains a year on January 1st. It's a cultural method of counting age.</p>
+            <p className="text-sm text-gray-400">This system counts the year of birth as year one.</p>
         </div>
     );
 
+    // FIX: The component was not returning any JSX, causing an error.
+    // Added the full return statement for the component UI.
     return (
         <div className="bg-gray-800 shadow-lg rounded-xl p-6 border border-gray-700 space-y-6">
+            <div className="flex justify-center bg-gray-900 p-1 rounded-lg">
+                {(Object.values(AgeSystem)).map(system => (
+                    <button
+                        key={system}
+                        onClick={() => setAgeSystem(system)}
+                        className={`w-full py-2 px-4 text-sm font-semibold rounded-md transition-colors ${
+                            ageSystem === system
+                                ? 'bg-blue-600 text-white shadow'
+                                : 'text-gray-300 hover:bg-gray-700'
+                        }`}
+                    >
+                        {system} Age
+                    </button>
+                ))}
+            </div>
+
             <div>
-                <div className="flex justify-center mb-4 bg-gray-900 p-1 rounded-lg border border-gray-700">
-                    <button 
-                        onClick={() => setAgeSystem(AgeSystem.WESTERN)}
-                        className={`px-4 py-2 text-sm font-semibold rounded-md transition-colors ${ageSystem === AgeSystem.WESTERN ? 'bg-blue-600 text-white shadow' : 'text-gray-400 hover:bg-gray-700'}`}>
-                        Western Age
-                    </button>
-                    <button 
-                        onClick={() => setAgeSystem(AgeSystem.EAST_ASIAN)}
-                        className={`px-4 py-2 text-sm font-semibold rounded-md transition-colors ${ageSystem === AgeSystem.EAST_ASIAN ? 'bg-blue-600 text-white shadow' : 'text-gray-400 hover:bg-gray-700'}`}>
-                        East Asian Age
-                    </button>
-                </div>
+                <h3 className="text-lg font-semibold text-gray-300 mb-2 text-center">Your Precise Age</h3>
                 {ageSystem === AgeSystem.WESTERN ? renderWesternAge() : renderEastAsianAge()}
             </div>
             
-            <div>
-                <h3 className="text-lg font-semibold text-gray-300 mb-3 text-center">Age in Other Units</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                    <StatBox label="Total Days" value={numberFormatter.format(ageData.totalDays)} />
-                    <StatBox label="Total Hours" value={numberFormatter.format(ageData.totalHours)} />
-                    <StatBox label="Total Minutes" value={numberFormatter.format(ageData.totalMinutes)} />
-                    <StatBox label="Total Seconds" value={numberFormatter.format(ageData.totalSeconds)} />
-                </div>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-4 border-t border-gray-700">
+                <StatBox label="Total Days" value={numberFormatter.format(ageData.totalDays)} />
+                <StatBox label="Total Hours" value={numberFormatter.format(ageData.totalHours)} />
+                <StatBox label="Total Minutes" value={numberFormatter.format(ageData.totalMinutes)} />
+                <StatBox label="Total Seconds" value={numberFormatter.format(ageData.totalSeconds)} />
             </div>
 
-             <div>
-                <h3 className="text-lg font-semibold text-gray-300 mb-3 text-center">Next Birthday Countdown</h3>
-                <div className="text-center bg-blue-900/20 border border-blue-500/30 p-4 rounded-lg">
-                     <p className="text-gray-300 mb-2">
-                       Your next birthday is on <span className="font-bold text-blue-300">{new Intl.DateTimeFormat(locale, { dateStyle: 'long' }).format(nextBirthdayData.date)}</span>
-                    </p>
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                         <StatBox label="Days" value={numberFormatter.format(nextBirthdayData.countdown.days)} className="bg-gray-800" />
-                         <StatBox label="Hours" value={numberFormatter.format(nextBirthdayData.countdown.hours)} className="bg-gray-800" />
-                         <StatBox label="Minutes" value={numberFormatter.format(nextBirthdayData.countdown.minutes)} className="bg-gray-800" />
-                         <StatBox label="Seconds" value={numberFormatter.format(nextBirthdayData.countdown.seconds)} className="bg-gray-800" />
-                    </div>
+             <div className="pt-4 border-t border-gray-700">
+                <h3 className="text-lg font-semibold text-gray-300 mb-2 text-center">Next Birthday Countdown</h3>
+                <p className="text-center text-gray-400 text-sm mb-4">
+                    {nextBirthdayData.date.toLocaleDateString(locale, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
+                </p>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                    <StatBox label="Days" value={numberFormatter.format(nextBirthdayData.countdown.days)} />
+                    <StatBox label="Hours" value={numberFormatter.format(nextBirthdayData.countdown.hours)} />
+                    <StatBox label="Minutes" value={numberFormatter.format(nextBirthdayData.countdown.minutes)} />
+                    <StatBox label="Seconds" value={numberFormatter.format(nextBirthdayData.countdown.seconds)} />
                 </div>
             </div>
         </div>

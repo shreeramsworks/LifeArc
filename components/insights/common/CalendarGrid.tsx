@@ -45,7 +45,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({ getDayStyle, getDayTooltip 
                 </h3>
                 <button onClick={handleNextMonth} className="p-2 rounded-full hover:bg-gray-700" aria-label="Next month"><i className="fa-solid fa-chevron-right"></i></button>
             </div>
-            <div className="grid grid-cols-7 gap-1 text-center text-xs text-gray-400">
+            <div className="grid grid-cols-7 gap-1 text-center text-xs text-gray-300">
                 {weekdays.map(day => <div key={day} className="font-bold">{day}</div>)}
                 {Array.from({ length: firstDay }).map((_, i) => <div key={`empty-${i}`}></div>)}
                 {Array.from({ length: daysInMonth }).map((_, i) => {

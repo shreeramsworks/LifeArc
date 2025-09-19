@@ -20,6 +20,7 @@ const AdSenseBanner: React.FC = () => {
                     </div>
                 </div>
                 <ins className="adsbygoogle"
+                     title="Advertisement"
                      style={{ display: 'block' }}
                      data-ad-client="ca-pub-4565198132863159"
                      // ===================================================================
