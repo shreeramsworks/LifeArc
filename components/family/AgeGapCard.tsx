@@ -66,7 +66,7 @@ const AgeGapCard: React.FC<AgeGapCardProps> = ({ family }) => {
                     </div>
                 )}
                  {family.length < 2 && (
-                    <p className="text-center text-gray-400 pt-2">Add at least two family members to calculate gaps.</p>
+                    <p className="text-center text-gray-300 pt-2">Add at least two family members to calculate gaps.</p>
                 )}
             </div>
         </Card>

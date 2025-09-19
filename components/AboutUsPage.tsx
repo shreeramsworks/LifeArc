@@ -40,21 +40,21 @@ const AboutUsPage: React.FC = () => {
                             <img src="https://i.pravatar.cc/150?img=9" alt="Dr. Evelyn Reed" className="w-16 h-16 rounded-full object-cover flex-shrink-0" />
                             <div>
                                 <h3 className="font-bold text-lg text-white">Dr. Evelyn Reed</h3>
-                                <p className="text-sm text-gray-400">Dr. Reed holds a Ph.D. in Psychology from Stanford University, specializing in human perception of time and memory. Her work explores the intersection of cognitive science and personal history.</p>
+                                <p className="text-sm text-gray-300">Dr. Reed holds a Ph.D. in Psychology from Stanford University, specializing in human perception of time and memory. Her work explores the intersection of cognitive science and personal history.</p>
                             </div>
                         </div>
                         <div className="flex items-start gap-4 p-4 bg-gray-900 rounded-lg">
                             <img src="https://i.pravatar.cc/150?img=10" alt="James Carter" className="w-16 h-16 rounded-full object-cover flex-shrink-0" />
                             <div>
                                 <h3 className="font-bold text-lg text-white">James Carter</h3>
-                                <p className="text-sm text-gray-400">James is a historian and genealogy enthusiast with over 20 years of experience in tracing family lineages. He is passionate about making historical research accessible to everyone.</p>
+                                <p className="text-sm text-gray-300">James is a historian and genealogy enthusiast with over 20 years of experience in tracing family lineages. He is passionate about making historical research accessible to everyone.</p>
                             </div>
                         </div>
                         <div className="flex items-start gap-4 p-4 bg-gray-900 rounded-lg">
                             <img src="https://i.pravatar.cc/150?img=11" alt="Sofia Chen" className="w-16 h-16 rounded-full object-cover flex-shrink-0" />
                             <div>
                                 <h3 className="font-bold text-lg text-white">Sofia Chen</h3>
-                                <p className="text-sm text-gray-400">Sofia is a writer and wellness advocate who explores alternative philosophies and systems of self-knowledge, including numerology, astrology, and ancient wisdom traditions.</p>
+                                <p className="text-sm text-gray-300">Sofia is a writer and wellness advocate who explores alternative philosophies and systems of self-knowledge, including numerology, astrology, and ancient wisdom traditions.</p>
                             </div>
                         </div>
                     </div>

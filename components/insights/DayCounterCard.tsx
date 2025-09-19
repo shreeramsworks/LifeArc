@@ -10,7 +10,7 @@ interface DayCounterCardProps {
 
 const StatBox: React.FC<{ label: string; value: string; }> = ({ label, value }) => (
     <div className="bg-gray-900 border border-gray-700 p-4 rounded-lg text-center">
-        <p className="text-sm text-gray-400">{label}</p>
+        <p className="text-sm text-gray-300">{label}</p>
         <p className="text-2xl font-bold text-blue-400">{value}</p>
     </div>
 );

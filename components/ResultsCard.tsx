@@ -39,8 +39,6 @@ const ResultsCard: React.FC<ResultsCardProps> = ({ ageData, ageSystem, setAgeSys
         </div>
     );
 
-    // FIX: The component was not returning any JSX, causing an error.
-    // Added the full return statement for the component UI.
     return (
         <div className="bg-gray-800 shadow-lg rounded-xl p-6 border border-gray-700 space-y-6">
             <div className="flex justify-center bg-gray-900 p-1 rounded-lg">

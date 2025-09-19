@@ -63,7 +63,7 @@ const WorldClockCard: React.FC<WorldClockCardProps> = ({ birthDateTime, birthTim
                     <ul className="space-y-2">
                         {cities.map(({ city, timezone }) => (
                             <li key={city} className="flex justify-between items-center text-sm p-2 rounded-md hover:bg-gray-700/50">
-                                <span className="text-gray-400">{city}</span>
+                                <span className="text-gray-300">{city}</span>
                                 <span className="font-mono text-gray-200">{formatters[timezone].format(birthDateTime)}</span>
                             </li>
                         ))}

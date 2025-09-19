@@ -55,9 +55,9 @@ const StatPill: React.FC<{
             onMouseMove={(e) => onHover(tooltip, e)}
             onMouseLeave={onLeave}
         >
-            <p className="text-sm text-gray-400">{label}</p>
+            <p className="text-sm text-gray-300">{label}</p>
             <p className="text-2xl font-bold text-blue-400">{displayValue.toFixed(1)} yrs</p>
-            {name && <p className="text-xs text-gray-400 truncate">({name})</p>}
+            {name && <p className="text-xs text-gray-300 truncate">({name})</p>}
         </div>
     );
 };

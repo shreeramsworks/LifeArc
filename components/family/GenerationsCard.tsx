@@ -45,7 +45,7 @@ const GenerationsCard: React.FC<GenerationsCardProps> = ({ family }) => {
                                     style={{ width: `${(gen.count / maxCount) * 100}%` }}
                                 ></div>
                             </div>
-                            <div className="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-opacity mt-1 text-xs text-center text-gray-400 bg-gray-900 p-1 rounded">
+                            <div className="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-opacity mt-1 text-xs text-center text-gray-300 bg-gray-900 p-1 rounded">
                                 {gen.members.join(', ')}
                             </div>
                         </div>

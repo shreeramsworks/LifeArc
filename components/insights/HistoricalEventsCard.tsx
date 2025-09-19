@@ -66,7 +66,7 @@ const HistoricalEventsCard: React.FC<HistoricalEventsCardProps> = ({ dob }) => {
                                 <li key={event.date + event.title} className="p-3 bg-gray-900 rounded-lg border border-gray-700 flex flex-col sm:flex-row justify-between sm:items-center">
                                     <div className="mb-2 sm:mb-0">
                                         <p className="font-semibold text-gray-200">{event.title}</p>
-                                        <p className="text-sm text-gray-500">{new Date(event.date + 'T00:00:00').toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+                                        <p className="text-sm text-gray-300">{new Date(event.date + 'T00:00:00').toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</p>
                                     </div>
                                     <div className="text-right font-mono text-blue-400 text-sm whitespace-nowrap">
                                         {event.ageAtEvent.years}y {event.ageAtEvent.months}m {event.ageAtEvent.days}d

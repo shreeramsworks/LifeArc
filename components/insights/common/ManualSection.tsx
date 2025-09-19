@@ -37,7 +37,7 @@ const ManualSection: React.FC<ManualSectionProps> = ({ title = "User Manual", se
                             {sections.map((section, index) => (
                                 <div key={index}>
                                     <h4 className="font-bold text-gray-200">{section.heading}</h4>
-                                    <div className="mt-1 text-gray-400 space-y-2">{section.content}</div>
+                                    <div className="mt-1 text-gray-300 space-y-2">{section.content}</div>
                                 </div>
                             ))}
                         </div>

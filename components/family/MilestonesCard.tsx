@@ -139,7 +139,7 @@ const MilestonesCard: React.FC<MilestonesCardProps> = ({ now, family }) => {
                                         <p className="font-bold text-gray-200">
                                             {m.type === 'milestone' ? `${m.name}'s ${m.milestone}th Birthday` : `${m.name}'s Birthday (${m.milestone})`}
                                         </p>
-                                        <p className="text-sm text-gray-400">{m.date.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+                                        <p className="text-sm text-gray-300">{m.date.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</p>
                                    </div>
                                </div>
                                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3 text-center">

@@ -13,7 +13,7 @@ const BlogIndexPage: React.FC<BlogIndexPageProps> = ({ onNavigate }) => {
                     <h1 className="text-4xl sm:text-5xl font-bold text-white">
                         LifeArc Blog
                     </h1>
-                    <p className="mt-2 text-lg text-gray-400">
+                    <p className="mt-2 text-lg text-gray-300">
                         In-depth articles on time, numerology, and personal history.
                     </p>
                 </header>
@@ -27,7 +27,7 @@ const BlogIndexPage: React.FC<BlogIndexPageProps> = ({ onNavigate }) => {
                             <p className="mt-4 text-gray-300">
                                 {article.summary}
                             </p>
-                            <div className="mt-4 text-sm text-gray-400">
+                            <div className="mt-4 text-sm text-gray-300">
                                 <span>By {article.author.name}</span> | <span suppressHydrationWarning>{new Date(article.publishDate + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                             </div>
                             <button

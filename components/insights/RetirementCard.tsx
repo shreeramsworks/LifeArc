@@ -93,12 +93,12 @@ const RetirementCard: React.FC<RetirementCardProps> = ({ dob }) => {
                 <div className="flex flex-col sm:flex-row gap-6 items-center justify-center p-4 bg-gray-900 rounded-lg border border-gray-700">
                     <CircularProgress percentage={data.percentElapsed} />
                     <div className="text-center sm:text-left">
-                        <p className="text-gray-400">Retirement Date (Age {retirementAge})</p>
+                        <p className="text-gray-300">Retirement Date (Age {retirementAge})</p>
                         <p className="text-2xl font-bold text-white">{data.retirementDate.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</p>
                         <div className="mt-2 grid grid-cols-2 gap-x-4 gap-y-1 text-sm">
-                            <span className="text-gray-400">Total Days Left:</span>
+                            <span className="text-gray-300">Total Days Left:</span>
                             <span className="font-mono text-blue-400">{data.totalDaysLeft > 0 ? formatter.format(data.totalDaysLeft) : "🎉"}</span>
-                            <span className="text-gray-400">Business Days Left:</span>
+                            <span className="text-gray-300">Business Days Left:</span>
                             <span className="font-mono text-blue-400">{data.businessDaysLeft > 0 ? formatter.format(data.businessDaysLeft) : "🎉"}</span>
                         </div>
                     </div>

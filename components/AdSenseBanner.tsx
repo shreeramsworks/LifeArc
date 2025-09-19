@@ -11,7 +11,7 @@ const AdSenseBanner: React.FC = () => {
 
     return (
         <div className="my-8 flex justify-center">
-            <div className="w-full max-w-4xl bg-gray-800 border border-gray-700 p-4 rounded-lg text-center text-gray-500">
+            <div className="w-full max-w-4xl bg-gray-800 border border-gray-700 p-4 rounded-lg text-center text-gray-300">
                 <div className="text-xs mb-2 flex justify-between items-center">
                     <span>Advertisement</span>
                     <div className="flex items-center gap-1">

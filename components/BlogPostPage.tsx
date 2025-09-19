@@ -22,7 +22,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ article, onNavigateBack }) 
                         <h1 className="text-3xl sm:text-4xl font-extrabold text-white">
                             {article.title}
                         </h1>
-                        <div className="mt-4 text-sm text-gray-400">
+                        <div className="mt-4 text-sm text-gray-300">
                             <span>By {article.author.name}</span> | <span suppressHydrationWarning>{new Date(article.publishDate + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                         </div>
                     </header>
@@ -34,7 +34,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ article, onNavigateBack }) 
                         <div>
                             <h4 className="font-bold text-gray-300">About the Author</h4>
                             <p className="text-lg font-semibold text-white">{article.author.name}</p>
-                            <p className="text-sm text-gray-400">{article.author.bio}</p>
+                            <p className="text-sm text-gray-300">{article.author.bio}</p>
                         </div>
                     </div>
                 </article>

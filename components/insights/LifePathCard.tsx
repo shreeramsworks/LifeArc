@@ -37,7 +37,7 @@ const LifePathCard: React.FC<LifePathCardProps> = ({ dobString }) => {
                 <div className="text-center p-6 bg-gray-900 border border-gray-700 rounded-lg">
                     <p className="text-lg text-gray-300">Your Life-Path Number is</p>
                     <p className="text-7xl font-extrabold text-blue-400 my-4">{lifePath}</p>
-                    <p className="font-semibold text-gray-400 text-xl">"{LIFE_PATH_KEYWORDS[lifePath]}"</p>
+                    <p className="font-semibold text-gray-300 text-xl">"{LIFE_PATH_KEYWORDS[lifePath]}"</p>
                 </div>
                 <ManualSection sections={lifePathManual} />
             </div>
