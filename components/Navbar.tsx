@@ -44,7 +44,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, activeTool, onNavigate }) 
             <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
                 <a href="#home" onClick={(e) => {e.preventDefault(); onNavigate('home')}} className="flex items-center gap-2 cursor-pointer">
                     <i className="fa-solid fa-hourglass-half text-blue-400 text-2xl" aria-label="LifeArc App Logo - Hourglass"></i>
-                    <h1 className="text-xl font-bold text-white">LifeArc</h1>
+                    <p className="text-xl font-bold text-white">LifeArc</p>
                 </a>
                 <div className="hidden sm:flex items-center space-x-2">
                     <NavLink isActive={currentPage === 'home'} href="#home" onClick={() => onNavigate('home')}>
