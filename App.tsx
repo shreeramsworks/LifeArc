@@ -68,54 +68,54 @@ const App: React.FC = () => {
             }
         };
 
-        const baseUrl = (document.querySelector("link[rel='canonical']")?.getAttribute('href') || 'https://lifearc.app/').split('#')[0];
+        const baseUrl = (document.querySelector("link[rel='canonical']")?.getAttribute('href') || 'https://lifearrc.app/').split('#')[0];
         const pageUrl = baseUrl + (window.location.hash || '');
 
 
-        let title = 'LifeArc | Interactive Age Calculator & Personal Insights';
-        let description = "Chart your universe with LifeArc. Calculate your precise age, track family milestones, and uncover personal insights. Secure, private, and all in your browser.";
+        let title = 'LifeArrc | Interactive Age Calculator & Personal Insights';
+        let description = "Chart your universe with LifeArrc. Calculate your precise age, track family milestones, and uncover personal insights. Secure, private, and all in your browser.";
 
         switch (currentPage) {
             case 'tools':
                 if (activeTool === 'familyTracker') {
-                    title = 'Family Tracker | LifeArc';
-                    description = 'Build a private family timeline. Track live ages, discover statistics, visualize generational gaps, and never miss a milestone with LifeArc.';
+                    title = 'Family Tracker | LifeArrc';
+                    description = 'Build a private family timeline. Track live ages, discover statistics, visualize generational gaps, and never miss a milestone with LifeArrc.';
                 } else {
-                    title = 'Precision Age Calculator | LifeArc';
+                    title = 'Precision Age Calculator | LifeArrc';
                     description = 'Calculate your age down to the second, countdown to your next birthday, and see your birth moment around the world with unmatched precision.';
                 }
                 break;
             case 'insights':
-                title = 'Chrono Insights | LifeArc';
-                description = 'Discover hidden patterns in your life. Explore biorhythms, find your life-path number, and see your age during major historical events with LifeArc.';
+                title = 'Chrono Insights | LifeArrc';
+                description = 'Discover hidden patterns in your life. Explore biorhythms, find your life-path number, and see your age during major historical events with LifeArrc.';
                 break;
             case 'blog':
                 if (activeArticleSlug) {
                     const article = articles.find(a => a.slug === activeArticleSlug);
                     if (article) {
-                        title = `${article.title} | LifeArc Blog`;
+                        title = `${article.title} | LifeArrc Blog`;
                         description = article.summary.length > 155 ? article.summary.substring(0, 152) + '...' : article.summary;
                     }
                 } else {
-                    title = 'LifeArc Blog | In-depth Articles on Time & Numerology';
-                    description = 'Explore articles on time perception, numerology, genealogy, and personal history from our team of experts at the LifeArc blog.';
+                    title = 'LifeArrc Blog | In-depth Articles on Time & Numerology';
+                    description = 'Explore articles on time perception, numerology, genealogy, and personal history from our team of experts at the LifeArrc blog.';
                 }
                 break;
             case 'about':
-                title = 'About Us | LifeArc';
-                description = 'Learn about the mission and privacy-first philosophy behind LifeArc. Meet the team dedicated to helping you chart your personal universe.';
+                title = 'About Us | LifeArrc';
+                description = 'Learn about the mission and privacy-first philosophy behind LifeArrc. Meet the team dedicated to helping you chart your personal universe.';
                 break;
             case 'contact':
-                title = 'Contact Us | LifeArc';
-                description = 'Have questions, feedback, or suggestions for LifeArc? We would love to hear from you. Get in touch with our support team.';
+                title = 'Contact Us | LifeArrc';
+                description = 'Have questions, feedback, or suggestions for LifeArrc? We would love to hear from you. Get in touch with our support team.';
                 break;
             case 'privacy':
-                title = 'Privacy Policy | LifeArc';
-                description = 'Review the LifeArc privacy policy. We are committed to a privacy-by-design approach where your data is never stored on our servers.';
+                title = 'Privacy Policy | LifeArrc';
+                description = 'Review the LifeArrc privacy policy. We are committed to a privacy-by-design approach where your data is never stored on our servers.';
                 break;
             case 'terms':
-                title = 'Terms of Service | LifeArc';
-                description = 'Read the terms of service for using the LifeArc application and its suite of tools.';
+                title = 'Terms of Service | LifeArrc';
+                description = 'Read the terms of service for using the LifeArrc application and its suite of tools.';
                 break;
         }
 

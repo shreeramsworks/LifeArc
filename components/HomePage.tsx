@@ -129,7 +129,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             {/* Hero Section */}
             <section className="text-center max-w-3xl mx-auto py-20 sm:py-24 px-4">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white">
-                    LifeArc: Chart Your Personal Universe
+                    LifeArrc: Chart Your Personal Universe
                 </h1>
                 <p className="mt-6 text-lg sm:text-xl text-gray-300">
                     Enter your birthday to see your life unfold in real-time, then explore our instruments to chart your entire personal journey, securely and privately.
@@ -168,22 +168,22 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                  </div>
             </section>
             
-            {/* Why Choose LifeArc Section */}
-            <section id="why-lifearc" className="max-w-6xl mx-auto px-4">
-                <h2 className="text-3xl font-bold text-center text-white mb-12">Why Choose LifeArc?</h2>
+            {/* Why Choose LifeArrc Section */}
+            <section id="why-lifearrc" className="max-w-6xl mx-auto px-4">
+                <h2 className="text-3xl font-bold text-center text-white mb-12">Why Choose LifeArrc?</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
                     <div className="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700">
                         <i className="fa-solid fa-shield-halved text-5xl text-green-400 mb-4"></i>
                         <h3 className="text-2xl font-bold text-white mb-2">Privacy by Design</h3>
                         <p className="text-gray-300">
-                            In an era where data is a commodity, LifeArc operates on a simple, powerful principle: your data is yours alone. All calculations are performed directly in your browser, and no personal information—not your birthday, not your family members' details—is ever sent to or stored on our servers. You can explore your personal universe with the absolute certainty that your information remains completely private and under your control.
+                            In an era where data is a commodity, LifeArrc operates on a simple, powerful principle: your data is yours alone. All calculations are performed directly in your browser, and no personal information—not your birthday, not your family members' details—is ever sent to or stored on our servers. You can explore your personal universe with the absolute certainty that your information remains completely private and under your control.
                         </p>
                     </div>
                     <div className="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700">
                         <i className="fa-solid fa-crosshairs text-5xl text-cyan-400 mb-4"></i>
                         <h3 className="text-2xl font-bold text-white mb-2">Unmatched Precision</h3>
                         <p className="text-gray-300">
-                            Accuracy matters. Many online calculators have errors due to timezones and daylight saving. LifeArc is built differently. We use the Julian Day Number (JDN) system, an astronomical standard for timekeeping that eliminates these ambiguities. This ensures that every calculation, from your age in seconds to your biorhythm chart, is based on the most precise and reliable method available, giving you insights you can trust.
+                            Accuracy matters. Many online calculators have errors due to timezones and daylight saving. LifeArrc is built differently. We use the Julian Day Number (JDN) system, an astronomical standard for timekeeping that eliminates these ambiguities. This ensures that every calculation, from your age in seconds to your biorhythm chart, is based on the most precise and reliable method available, giving you insights you can trust.
                         </p>
                     </div>
                 </div>

@@ -14,19 +14,19 @@ const ContactUsPage: React.FC = () => {
                 </header>
 
                 <div className="prose prose-invert max-w-none text-gray-300 text-center">
-                    <p>If you have any questions, feedback, or suggestions for LifeArc, please don't hesitate to reach out. Your input helps us improve and grow the platform for everyone.</p>
+                    <p>If you have any questions, feedback, or suggestions for LifeArrc, please don't hesitate to reach out. Your input helps us improve and grow the platform for everyone.</p>
                     
                     <div className="mt-8">
                         <p className="text-lg">For all inquiries, please email us at:</p>
                         <a 
-                            href="mailto:support@lifearc.app" 
+                            href="mailto:support@lifearrc.app" 
                             className="text-2xl font-bold text-blue-400 hover:text-blue-300 hover:underline"
                         >
-                            support@lifearc.app
+                            support@lifearrc.app
                         </a>
                     </div>
 
-                    <p className="mt-8 text-gray-300">We do our best to respond to all emails within 48 business hours. Thank you for your interest in LifeArc!</p>
+                    <p className="mt-8 text-gray-300">We do our best to respond to all emails within 48 business hours. Thank you for your interest in LifeArrc!</p>
                 </div>
             </main>
         </div>

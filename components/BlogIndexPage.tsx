@@ -11,7 +11,7 @@ const BlogIndexPage: React.FC<BlogIndexPageProps> = ({ onNavigate }) => {
             <main className="max-w-4xl mx-auto space-y-12">
                 <header className="text-center">
                     <h1 className="text-4xl sm:text-5xl font-bold text-white">
-                        LifeArc Blog
+                        LifeArrc Blog
                     </h1>
                     <p className="mt-2 text-lg text-gray-300">
                         In-depth articles on time, numerology, and personal history.

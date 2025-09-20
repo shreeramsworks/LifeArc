@@ -40,7 +40,7 @@ const Footer: React.FC<FooterProps> = ({ currentPage, onNavigate }) => {
                     <FooterLink page="terms" currentPage={currentPage} onNavigate={onNavigate}>Terms of Service</FooterLink>
                 </div>
                 <p className="pt-4 text-gray-300">
-                   &copy; {new Date().getFullYear()} LifeArc. All calculations and data are processed in your browser.
+                   &copy; {new Date().getFullYear()} LifeArrc. All calculations and data are processed in your browser.
                 </p>
             </div>
         </footer>

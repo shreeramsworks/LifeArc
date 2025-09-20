@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lifearc.app/sitemap.xml
+Sitemap: https://lifearrc.app/sitemap.xml

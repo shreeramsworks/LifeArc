@@ -14,10 +14,10 @@ const PrivacyPolicyPage: React.FC = () => {
                 </header>
 
                 <div className="prose prose-invert max-w-none text-gray-300">
-                    <p>Welcome to LifeArc. Your privacy is critically important to us. This Privacy Policy document outlines the types of information that is collected and recorded by LifeArc and how we use it. This app is designed with a "privacy-first" approach.</p>
+                    <p>Welcome to LifeArrc. Your privacy is critically important to us. This Privacy Policy document outlines the types of information that is collected and recorded by LifeArrc and how we use it. This app is designed with a "privacy-first" approach.</p>
                     
                     <h2 className="text-blue-400">1. Data We Do Not Collect</h2>
-                    <p>The core principle of LifeArc is that your personal data stays with you. We do not have servers that store your personal information.</p>
+                    <p>The core principle of LifeArrc is that your personal data stays with you. We do not have servers that store your personal information.</p>
                     <ul>
                         <li>We do not collect or store your date of birth.</li>
                         <li>We do not collect or store the names, relationships, or dates of birth of your family members.</li>
@@ -25,7 +25,7 @@ const PrivacyPolicyPage: React.FC = () => {
                     </ul>
 
                     <h2 className="text-blue-400">2. Information You Provide & Local Storage</h2>
-                    <p>All data you enter into LifeArc, including your date of birth, family member details, and any submitted reviews, is processed and stored <strong>exclusively on your local device</strong> within your web browser's storage (`localStorage`).</p>
+                    <p>All data you enter into LifeArrc, including your date of birth, family member details, and any submitted reviews, is processed and stored <strong>exclusively on your local device</strong> within your web browser's storage (`localStorage`).</p>
                     <ul>
                         <li><strong>Calculations:</strong> All age, timeline, and insight calculations are performed directly in your browser. No data is sent to a server.</li>
                         <li><strong>Data Control:</strong> You have complete control over this data. You can clear it at any time by clearing your browser's cache and site data for this application.</li>
@@ -33,7 +33,7 @@ const PrivacyPolicyPage: React.FC = () => {
                     </ul>
 
                     <h2 className="text-blue-400">3. Advertising and Cookies</h2>
-                    <p>LifeArc uses third-party advertising from Google AdSense to support our site. This is how we are able to offer the tool for free.</p>
+                    <p>LifeArrc uses third-party advertising from Google AdSense to support our site. This is how we are able to offer the tool for free.</p>
                     <ul>
                         <li>Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to this website or other websites.</li>
                         <li>Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to our sites and/or other sites on the Internet.</li>
@@ -46,7 +46,7 @@ const PrivacyPolicyPage: React.FC = () => {
                     <p>We use content delivery networks (CDNs) to serve application files (like fonts and scripts) to you efficiently. These services may collect basic, non-personally identifiable information as part of their standard logging procedures.</p>
 
                     <h2 className="text-blue-400">5. Children's Information</h2>
-                    <p>LifeArc does not knowingly collect any Personal Identifiable Information from children under the age of 13. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records (which, in this case, would mean guiding you on how to clear the browser data).</p>
+                    <p>LifeArrc does not knowingly collect any Personal Identifiable Information from children under the age of 13. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records (which, in this case, would mean guiding you on how to clear the browser data).</p>
 
                     <h2 className="text-blue-400">6. Consent</h2>
                     <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
