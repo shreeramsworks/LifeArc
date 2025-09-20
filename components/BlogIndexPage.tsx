@@ -1,5 +1,6 @@
 import React from 'react';
 import { articles } from '../data/articles';
+import AdSenseBanner from './AdSenseBanner';
 
 interface BlogIndexPageProps {
     onNavigate: (page: 'blog', articleSlug: string) => void;
@@ -17,6 +18,8 @@ const BlogIndexPage: React.FC<BlogIndexPageProps> = ({ onNavigate }) => {
                         In-depth articles on time, numerology, and personal history.
                     </p>
                 </header>
+
+                <AdSenseBanner />
 
                 <div className="space-y-8">
                     {articles.map((article) => (

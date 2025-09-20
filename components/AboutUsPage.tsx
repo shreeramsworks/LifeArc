@@ -1,4 +1,5 @@
 import React from 'react';
+import AdSenseBanner from './AdSenseBanner';
 
 const AboutUsPage: React.FC = () => {
     return (
@@ -58,8 +59,12 @@ const AboutUsPage: React.FC = () => {
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <h2 className="text-blue-400 mt-8">Our Commitment to You</h2>
+                <AdSenseBanner />
+
+                <div className="prose prose-invert max-w-none text-gray-300">
+                    <h2 className="text-blue-400">Our Commitment to You</h2>
                     <p>LifeArrc is a passion project dedicated to helping you chart your personal universe. We are committed to maintaining a high-quality, free-to-use service supported transparently through non-intrusive advertising. Thank you for joining us on this journey of discovery.</p>
                 </div>
             </main>
