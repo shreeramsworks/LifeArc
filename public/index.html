@@ -3,28 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LifeArrc | Interactive Age Calculator & Personal Insights</title>
-    <meta name="description" content="Chart your universe with LifeArrc. Calculate your precise age, track family milestones, and uncover personal insights. Secure, private, and all in your browser." />
+    <title>Private Age Calculator, Family Tree & Numerology Tools | LifeArrc</title>
+    <meta name="description" content="Discover personal insights with complete privacy. Our tools are 100% browser-based with zero data collection. Calculate your age, track your family, and explore Vedic numerology, all with guaranteed anonymity." />
     <meta name="google-adsense-account" content="ca-pub-4565198132863159">
     <link rel="canonical" href="https://lifearrc.app/" />
     
     <!-- Social Media Meta Tags -->
-    <meta property="og:title" content="LifeArrc | Interactive Age Calculator & Personal Insights" />
-    <meta property="og:description" content="Chart your universe with LifeArrc. Calculate your precise age, track family milestones, and uncover personal insights. Secure, private, and all in your browser." />
+    <meta property="og:title" content="Private Age Calculator, Family Tree & Numerology Tools | LifeArrc" />
+    <meta property="og:description" content="Discover personal insights with complete privacy. Our tools are 100% browser-based with zero data collection. Calculate your age, track your family, and explore Vedic numerology, all with guaranteed anonymity." />
     <meta property="og:image" content="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⏳</text></svg>" />
     <meta property="og:url" content="https://lifearrc.app/" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="LifeArrc | Interactive Age Calculator & Personal Insights" />
-    <meta name="twitter:description" content="Chart your universe with LifeArrc. Calculate your precise age, track family milestones, and uncover personal insights. Secure, private, and all in your browser." />
+    <meta name="twitter:title" content="Private Age Calculator, Family Tree & Numerology Tools | LifeArrc" />
+    <meta name="twitter:description" content="Discover personal insights with complete privacy. Our tools are 100% browser-based with zero data collection. Calculate your age, track your family, and explore Vedic numerology, all with guaranteed anonymity." />
     <meta name="twitter:image" content="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⏳</text></svg>" />
 
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⏳</text></svg>">
     <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⏳</text></svg>">
 
-    <script defer src="https://cdn.tailwindcss.com"></script>
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
     
   <script type="importmap">
 {
@@ -48,7 +48,7 @@
       "name": "LifeArrc",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://lifearrc.app/",
+        "target": "https://lifearrc.app/search?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     },
@@ -57,7 +57,11 @@
       "@type": "SoftwareApplication",
       "name": "LifeArrc",
       "operatingSystem": "Web",
-      "applicationCategory": "LifestyleApplication",
+      "applicationCategory": "UtilitiesApplication",
+      "applicationSubCategory": "Calculator",
+      "permissions": "No permissions required",
+      "storageRequirements": "Local browser storage only",
+      "privacy": "No data collection - 100% browser-based calculations",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
@@ -78,23 +82,7 @@
           "name": "What is LifeArrc?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "LifeArrc is a suite of web-based tools designed to help you explore your personal timeline. It includes a precision age calculator, a family legacy tracker, and a suite of 'Chrono Insights' tools like a biorhythm chart and a life-path number calculator."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is my age calculated so accurately?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "LifeArrc uses high-precision math based on Julian Day Numbers (JDN) for its core calculations. This method avoids common errors related to timezones and daylight saving time, providing a highly accurate count of the days, hours, and seconds you've been alive."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is a Life-Path Number?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "In numerology, your Life-Path number is a single digit (or master number 11, 22, 33) derived from your birth date. It's believed to summarize your personality, strengths, and challenges. LifeArrc calculates this for you instantly in the Chrono Insights tool."
+            "text": "LifeArrc is a suite of private, web-based tools designed to help you explore your personal timeline. It includes a precision age calculator, a family legacy tracker, and a suite of 'Vedic Insights' tools like a Destiny Number (Moolank) calculator."
           }
         },
         {
@@ -102,13 +90,30 @@
           "name": "Is my data private and secure?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. All calculations in LifeArrc are performed entirely within your browser. No personal data, including your date of birth or family information, is ever sent to or stored on our servers."
+            "text": "Yes. All calculations in LifeArrc are performed entirely within your browser using JavaScript. No personal data, including your date of birth or family information, is ever sent to or stored on our servers. This makes it a 100% private and secure application."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a Vedic Destiny Number (Moolank)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In Vedic numerology, your Moolank (Destiny Number) is a single digit derived from your day of birth. It's believed to summarize your core personality, ruling planet, and primary energies. LifeArrc calculates this for you instantly in the Vedic Insights tool."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the Family Tracker private?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Family Tracker stores all information you enter directly in your browser's local storage. No names, dates, or relationships are ever uploaded to a server, making it a truly offline family tree software experience within your browser."
           }
         }
       ]
     }
   ]
   </script>
+  <script id="dynamic-schema" type="application/ld+json"></script>
 
 </head>
   <body class="bg-gray-900 text-gray-200">
@@ -117,7 +122,7 @@
       <p style="text-align: center;">Please enable JavaScript to use LifeArrc. Discover your life in real-time with LifeArrc. Calculate your precise age, track your family's legacy, and uncover personal insights like your biorhythm and life-path number. Chart your universe.</p>
     </noscript>
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+    <script type="module" src="./index.tsx"></script>
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
   </body>
 </html>

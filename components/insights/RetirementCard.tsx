@@ -27,7 +27,7 @@ const CircularProgress: React.FC<{ percentage: number }> = ({ percentage }) => {
                 fill="none"
             />
             <circle
-                className="stroke-current text-blue-500"
+                className="stroke-current text-sky-500"
                 cx={sqSize / 2}
                 cy={sqSize / 2}
                 r={radius}
@@ -65,7 +65,7 @@ const retirementManual = [
     },
     { heading: "How to read it", content: <p>Ring fills toward 100%; centre shows “24 y 8 m 12 d - 6,325 business days left”.</p> },
     { heading: "Example", content: <p>At age 60 target, you retire on 15 May 2050 (for DOB 1990-05-15).</p> },
-    { heading: "Disclaimer", content: <p>For planning only; consult a financial advisor for money decisions.</p> }
+    { heading: "Disclaimer", content: <p>This is a modern chronological tool. Consult a financial advisor for money decisions.</p> }
 ];
 
 
@@ -97,9 +97,9 @@ const RetirementCard: React.FC<RetirementCardProps> = ({ dob }) => {
                         <p className="text-2xl font-bold text-white">{data.retirementDate.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</p>
                         <div className="mt-2 grid grid-cols-2 gap-x-4 gap-y-1 text-sm">
                             <span className="text-gray-300">Total Days Left:</span>
-                            <span className="font-mono text-blue-400">{data.totalDaysLeft > 0 ? formatter.format(data.totalDaysLeft) : "🎉"}</span>
+                            <span className="font-mono text-sky-400">{data.totalDaysLeft > 0 ? formatter.format(data.totalDaysLeft) : "🎉"}</span>
                             <span className="text-gray-300">Business Days Left:</span>
-                            <span className="font-mono text-blue-400">{data.businessDaysLeft > 0 ? formatter.format(data.businessDaysLeft) : "🎉"}</span>
+                            <span className="font-mono text-sky-400">{data.businessDaysLeft > 0 ? formatter.format(data.businessDaysLeft) : "🎉"}</span>
                         </div>
                     </div>
                 </div>
@@ -130,7 +130,7 @@ const RetirementCard: React.FC<RetirementCardProps> = ({ dob }) => {
                             max="75"
                             value={retirementAge}
                             onChange={(e) => setRetirementAge(Number(e.target.value))}
-                            className="w-full mt-1 h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-blue-500"
+                            className="w-full mt-1 h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-sky-500"
                         />
                     </div>
                 </div>

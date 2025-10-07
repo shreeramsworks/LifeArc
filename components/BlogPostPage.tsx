@@ -4,19 +4,20 @@ import AdSenseBanner from './AdSenseBanner';
 
 interface BlogPostPageProps {
     article: Article;
-    onNavigateBack: () => void;
+    onNavigate: (path: string) => void;
 }
 
-const BlogPostPage: React.FC<BlogPostPageProps> = ({ article, onNavigateBack }) => {
+const BlogPostPage: React.FC<BlogPostPageProps> = ({ article, onNavigate }) => {
     return (
         <div className="p-4 sm:p-6 lg:p-8">
             <main className="max-w-4xl mx-auto">
-                <button
-                    onClick={onNavigateBack}
-                    className="mb-8 text-blue-400 font-semibold hover:underline"
+                <a
+                    href="#/blog"
+                    onClick={(e) => { e.preventDefault(); onNavigate('#/blog'); }}
+                    className="mb-8 inline-block text-blue-400 font-semibold hover:underline"
                 >
                     &laquo; Back to Blog Index
-                </button>
+                </a>
                 <article className="bg-gray-800 rounded-xl border border-gray-700 p-8 sm:p-12 shadow-lg">
                     <header>
                         <h1 className="text-3xl sm:text-4xl font-extrabold text-white">

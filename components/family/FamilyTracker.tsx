@@ -24,6 +24,14 @@ const FamilyTracker: React.FC = () => {
 
     return (
         <div className="space-y-8">
+             <header className="text-center">
+                <h1 className="text-4xl sm:text-5xl font-bold text-white">
+                    Private Family Tracker - Build Your Family Timeline Securely
+                </h1>
+                <p className="mt-2 text-lg text-gray-300 max-w-3xl mx-auto">
+                   Use our <strong>offline family tree software</strong> to create your <strong>private family timeline</strong>. As a <strong>secure family timeline maker</strong> with no server storage and no account required, it's the perfect <strong>private genealogy software</strong> with a guarantee of <strong>zero data sharing</strong>.
+                </p>
+            </header>
             <FamilyMembersCard 
                 now={now} 
                 family={family}
@@ -33,6 +41,14 @@ const FamilyTracker: React.FC = () => {
                 exportFamily={exportFamily}
                 importFamily={importFamily}
             />
+             <div className="bg-gray-800 shadow-lg rounded-xl p-6 border border-gray-700 mt-8">
+                 <h2 className="text-2xl font-bold text-blue-400 mb-4">Complete Privacy Guarantee</h2>
+                 <ul className="list-disc list-inside space-y-2 text-gray-300">
+                    <li><strong>No Server Storage:</strong> All family data you enter is stored exclusively in your browser's local storage. It never touches our servers.</li>
+                    <li><strong>No Account Required:</strong> This is a true <strong>private family tree app with no login</strong> needed. Start building your timeline instantly and anonymously.</li>
+                     <li><strong>You Control Your Data:</strong> Export your data to a file at any time, or clear your browser cache to permanently delete it.</li>
+                 </ul>
+            </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <AgeGapCard family={family} />
                 <StatisticsCard now={now} family={family} />
@@ -41,12 +57,13 @@ const FamilyTracker: React.FC = () => {
             <GenerationsCard family={family} />
             <MilestonesCard now={now} family={family} />
             <InstructionsCard
-                title="How to Use the Family Tracker"
+                title="How to Use the Private Family Tracker"
                 steps={[
-                    "Use the action buttons in the 'Family Members' card to 'Add' or 'Import' your relatives.",
-                    "Fill in each member's details, including their name, relation to you, and date of birth.",
-                    "Once members are added, the cards below will automatically populate with live-updating data.",
-                    "Explore statistics, compare age gaps between members, visualize generations, and track milestones."
+                    "Add family members to start your <strong>browser based family tree</strong>. This is a <strong>private family tree app with no login</strong> required.",
+                    "All data is saved on your device, providing a true <strong>offline family tree software</strong> experience with <strong>no data sharing</strong>.",
+                    "Instantly see <strong>live age tracker</strong> details for your whole family and view <strong>family age statistics</strong>.",
+                    "Use the <strong>family age gap calculator</strong> to compare any two members and see the precise time between them.",
+                    "Enjoy a completely <strong>anonymous family genealogy tool</strong> that puts your privacy first."
                 ]}
             />
         </div>

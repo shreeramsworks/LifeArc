@@ -11,7 +11,7 @@ interface DayCounterCardProps {
 const StatBox: React.FC<{ label: string; value: string; }> = ({ label, value }) => (
     <div className="bg-gray-900 border border-gray-700 p-4 rounded-lg text-center">
         <p className="text-sm text-gray-300">{label}</p>
-        <p className="text-2xl font-bold text-blue-400">{value}</p>
+        <p className="text-2xl font-bold text-sky-400">{value}</p>
     </div>
 );
 
@@ -53,7 +53,7 @@ const dayCounterManual = [
     },
     { heading: "How to read it", content: <p>Big numbers for instant awe. A green badge and confetti appear when you hit a milestone.</p> },
     { heading: "Example", content: <p>As of 3 Sep 2025 you have lived 12,935 days (for DOB 1990-05-15).</p> },
-    { heading: "Disclaimer", content: <p>Milestones are symbolic; celebrate responsibly.</p> }
+    { heading: "Disclaimer", content: <p>This is a modern chronological tool provided for fun and perspective.</p> }
 ];
 
 const DayCounterCard: React.FC<DayCounterCardProps> = ({ dob, daysSinceBirth }) => {
@@ -117,7 +117,7 @@ const DayCounterCard: React.FC<DayCounterCardProps> = ({ dob, daysSinceBirth }) 
 
                 <div className="text-center p-4 bg-gray-900 border border-gray-700 rounded-lg">
                     <h3 className="text-lg font-semibold text-gray-300 mb-2">Upcoming Milestones</h3>
-                    <div className="text-blue-400">
+                    <div className="text-sky-400">
                         {nextPrimeBirthday && <p>Your next prime-numbered birthday is your <strong>{nextPrimeBirthday}th</strong>!</p>}
                         {milestones.find(m => m.value > daysSinceBirth) && 
                             <p>Your next major day milestone is your <strong>{milestones.find(m => m.value > daysSinceBirth)?.label}</strong>!</p>}

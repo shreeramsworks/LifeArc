@@ -37,6 +37,70 @@ const authors = {
 
 export const articles: Article[] = [
     {
+        slug: 'secure-age-calculator-privacy',
+        title: "Why Your Age Calculator Shouldn't Store Your Birth Date",
+        summary: "In the digital age, even simple tools can pose a privacy risk. We explore the importance of using a secure age calculator that performs all calculations in your browser, ensuring your personal data is never stored or collected.",
+        author: authors.EVELYN_REED,
+        publishDate: '2024-03-19',
+        content: React.createElement("div", { className: "prose prose-invert max-w-none text-gray-300" },
+            React.createElement("p", null, "An online age calculator is a simple convenience. You enter your birth date, and it tells you how old you are in years, months, days, and even seconds. But have you ever stopped to think about what happens to that highly personal piece of information—your date of birth—after you click 'calculate'?"),
+            React.createElement("h3", { className: "text-blue-400" }, "The Hidden Data Trail"),
+            React.createElement("p", null, "Many web applications, even seemingly simple ones, are designed to send the data you enter back to a server. This data can be stored in a database, logged for analytics, or used for marketing profiles. While often harmless, storing a date of birth is a significant privacy concern. It's a key piece of Personally Identifiable Information (PII) that can be used in identity theft."),
+            React.createElement("h3", { className: "text-blue-400" }, "The LifeArrc Difference: A Secure, Browser-Based Approach"),
+            React.createElement("p", null, "LifeArrc was built on a principle of 'privacy by design.' Our ", React.createElement("a", { href: "#/tools/ageCalculator", className: "text-blue-400 hover:underline" }, "Precise Age Calculator"), " operates entirely within your web browser. This means:"),
+            React.createElement("ul", null,
+                React.createElement("li", null, React.createElement("strong", null, "Zero Data Collection:"), " Your birth date is never sent to our servers. It never leaves your device."),
+                React.createElement("li", null, React.createElement("strong", null, "No Server Storage:"), " Since we never receive your data, we cannot store it. There is no database of user birth dates that could be breached."),
+                React.createElement("li", null, React.createElement("strong", null, "Complete Anonymity:"), " You can use our calculator with the absolute assurance that your activity is private and anonymous.")
+            ),
+            React.createElement("p", null, "This approach is made possible by modern web technologies that allow for complex calculations to be run on the 'client-side' (your computer) rather than the 'server-side' (our computer). It's a more ethical and secure way to build personal tools."),
+            React.createElement("p", null, "Next time you use an online tool, ask yourself: where is my data going? With LifeArrc, the answer is simple: it stays with you. That's the peace of mind a truly secure age calculator should offer.")
+        ),
+    },
+    {
+        slug: 'private-family-tree-apps',
+        title: "The Hidden Privacy Costs of Popular Family Tree Apps",
+        summary: "Building a family tree involves sensitive personal data. We compare the cloud-based model of major genealogy sites with the privacy-first, local storage approach of LifeArrc's Private Family Tracker.",
+        author: authors.JAMES_CARTER,
+        publishDate: '2024-03-26',
+        content: React.createElement("div", { className: "prose prose-invert max-w-none text-gray-300" },
+            React.createElement("p", null, "Genealogy is a deeply personal journey that involves gathering sensitive information about your loved ones, both living and deceased. While major platforms like Ancestry.com and MyHeritage offer powerful tools and vast record databases, their cloud-based nature comes with inherent privacy trade-offs that users should understand."),
+            React.createElement("h3", { className: "text-blue-400" }, "The Cloud Model: Convenience vs. Control"),
+            React.createElement("p", null, "When you use a major genealogy service, you are uploading your entire family history to their servers. This includes names, dates of birth, relationships, and photos. The convenience is that you can access your tree from anywhere. The cost is a loss of control."),
+            React.createElement("p", null, "Your family's data is now part of a massive corporate database. It can be subject to data breaches, changes in terms of service, and company policies on data usage that you may not be comfortable with. For many, this is a reasonable trade-off for access to historical records. But for those who wish to simply chart their known family history privately, there is a better way."),
+            React.createElement("h3", { className: "text-blue-400" }, "The Alternative: An Offline, Browser-Based Family Tracker"),
+            React.createElement("p", null, "LifeArrc's ", React.createElement("a", { href: "#/tools/familyTracker", className: "text-blue-400 hover:underline" }, "Family Tracker"), " was designed as a direct answer to these privacy concerns. It is not a tool for discovering unknown ancestors through record searches; it is a tool for securely organizing the family history you already know."),
+            React.createElement("p", null, "All the data you enter into the Family Tracker is stored in your browser's `localStorage`. This is a secure storage space on your own device. The benefits are clear:"),
+            React.createElement("ul", null,
+                React.createElement("li", null, React.createElement("strong", null, "Absolute Privacy:"), " Your family's data is never transmitted over the internet or stored on our servers."),
+                React.createElement("li", null, React.createElement("strong", null, "No Account Needed:"), " You don't need to create an account or provide an email address. You can start building your private family tree immediately."),
+                React.createElement("li", null, React.createElement("strong", null, "You Own Your Data:"), " You can export your family data to a file on your computer at any time. Clearing your browser cache permanently deletes the data. You are in complete control.")
+            ),
+            React.createElement("p", null, "For users who value privacy above all, an offline family tree software approach like LifeArrc provides the perfect solution for charting a family timeline without compromising on security and confidentiality.")
+        ),
+    },
+    {
+        slug: 'anonymous-numerology-calculator',
+        title: "How to Calculate Your Life Path Number Anonymously",
+        summary: "Numerology readings often require you to submit your full name and birth date to a website. Learn how a private numerology calculator works and why you don't need to share personal data to get an accurate reading.",
+        author: authors.SOFIA_CHEN,
+        publishDate: '2024-04-02',
+        content: React.createElement("div", { className: "prose prose-invert max-w-none text-gray-300" },
+            React.createElement("p", null, "Numerology offers a fascinating lens through which to view your personality and life's journey. However, many websites that offer numerology calculators ask for your full name and date of birth, which they then store in their databases. For the privacy-conscious individual, this can be a deterrent. The good news is that sharing this data is entirely unnecessary to get an accurate Life-Path number reading."),
+            React.createElement("h3", { className: "text-blue-400" }, "The Only Data Point Needed: Your Birth Date"),
+            React.createElement("p", null, "Your Life-Path number, the most fundamental number in your numerology chart, is derived solely from your date of birth. The calculation involves summing the digits of your birth month, day, and year. Your name is used for other calculations in numerology (like the 'Destiny Number'), but it is not required for the Life-Path number."),
+            React.createElement("h3", { className: "text-blue-400" }, "The Power of a Private Numerology Calculator"),
+            React.createElement("p", null, "LifeArrc's ", React.createElement("a", { href: "#/insights", className: "text-blue-400 hover:underline" }, "Vedic Insights"), " tools, including the Destiny Number (Moolank) calculator, are built to be completely anonymous. The calculation is a purely mathematical process that can be executed by a simple script."),
+            React.createElement("p", null, "When you enter your birth date into LifeArrc:"),
+            React.createElement("ol", null,
+                React.createElement("li", null, "The date is used by JavaScript code running in your browser to perform the summing and reduction."),
+                React.createElement("li", null, "The result is instantly displayed on your screen."),
+                React.createElement("li", null, "The birth date you entered is not sent anywhere. It is processed and then discarded, never stored on a server.")
+            ),
+            React.createElement("p", null, "This allows you to explore the insights of numerology without making the privacy trade-off of submitting your personal data to a third party. It's a simple, secure, and anonymous way to get a reading, putting you in full control of your information. You can explore your Destiny Number, Planetary Influences, and other cycles with confidence, knowing your personal data remains personal.")
+        ),
+    },
+    {
         slug: 'deep-dive-into-numerology',
         title: 'A Deep Dive into Numerology and Your Life-Path Number',
         summary: 'Unlock the secrets of your birth date. Discover how numerology calculates your Life-Path number and what it reveals about your personality, strengths, and destiny.',
@@ -56,7 +120,7 @@ export const articles: Article[] = [
                 React.createElement("li", null, React.createElement("strong", null, "Final Sum:"), " Now, we add the reduced numbers: 5 (Month) + 6 (Day) + 1 (Year) = 12."),
                 React.createElement("li", null, React.createElement("strong", null, "Final Reduction:"), " We reduce the final sum: 1 + 2 = 3.")
             ),
-            React.createElement("p", null, "So, for a person born on May 15, 1990, the Life-Path number is 3. LifeArrc's Chrono Insights tool does this for you instantly."),
+            React.createElement("p", null, "So, for a person born on May 15, 1990, the Life-Path number is 3. LifeArrc's ", React.createElement("a", { href: "#/insights", className: "text-blue-400 hover:underline" }, "Vedic Insights tool"), " does this for you instantly."),
             React.createElement("h3", { className: "text-blue-400" }, "What Does It Mean?"),
             React.createElement("p", null, "Each number from 1 to 9, plus the Master Numbers 11, 22, and 33, has its own distinct meaning and energy. A Life-Path 3, for instance, is often associated with creativity, communication, and social interaction. They are the \"Communicators.\" A Life-Path 8, the \"Powerhouse,\" is associated with ambition, leadership, and financial success."),
             React.createElement("p", null, "While numerology is not a hard science, many find it to be a valuable tool for self-reflection and personal growth. It provides a framework for understanding your innate tendencies and can help guide you toward a more fulfilling life path. Explore your number in our app and see what resonates with you!")
@@ -71,7 +135,7 @@ export const articles: Article[] = [
         content: React.createElement("div", { className: "prose prose-invert max-w-none text-gray-300" },
             React.createElement("p", null, "The theory of biorhythms suggests that our lives are influenced by rhythmic biological cycles that affect our physical, emotional, and intellectual capabilities. It's an idea that has fascinated people for over a century, promising a way to predict our \"on\" and \"off\" days. But what's the real story behind these oscillating waves?"),
             React.createElement("h3", { className: "text-blue-400" }, "The Three Core Cycles"),
-            React.createElement("p", null, "Classic biorhythm theory, as seen in the LifeArrc app, is based on three main cycles that begin at birth:"),
+            React.createElement("p", null, "Classic biorhythm theory is based on three main cycles that begin at birth:"),
             React.createElement("ul", null,
                 React.createElement("li", null, React.createElement("strong", null, "Physical Cycle (23 days):"), " This cycle is said to govern physical strength, stamina, coordination, and general well-being."),
                 React.createElement("li", null, React.createElement("strong", null, "Emotional Cycle (28 days):"), " This cycle influences our emotions, mood, creativity, and intuition. Its 28-day period is often noted for its similarity to the lunar cycle."),
@@ -81,14 +145,14 @@ export const articles: Article[] = [
             React.createElement("h3", { className: "text-blue-400" }, "Scientific Standing: A Clear Verdict"),
             React.createElement("p", null, "It's important to state clearly: from a scientific perspective, biorhythm theory is considered a pseudoscience. Numerous studies conducted over several decades have found no correlation between biorhythm charts and actual performance in sports, academics, or accident rates. The scientific community has largely dismissed the theory for its lack of empirical evidence and its arbitrary choice of cycle lengths."),
             React.createElement("h3", { className: "text-blue-400" }, "So, Why Use It? The Value of Rhythmic Thinking"),
-            React.createElement("p", null, "If biorhythms aren't scientifically proven, why do they persist in tools like LifeArrc? The value lies not in their predictive accuracy, but in their ability to promote self-reflection and structured planning."),
+            React.createElement("p", null, "If biorhythms aren't scientifically proven, why do they persist? The value lies not in their predictive accuracy, but in their ability to promote self-reflection and structured planning. (Note: LifeArrc has moved to a more authentic Vedic system. You can explore it in our ", React.createElement("a", { href: "#/insights", className: "text-blue-400 hover:underline" }, "Vedic Insights tool"), ".)"),
             React.createElement("p", null, "Thinking about your life in cycles can be a powerful psychological tool. It encourages you to:"),
             React.createElement("ul", null,
                 React.createElement("li", null, React.createElement("strong", null, "Practice Self-Awareness:"), " Simply asking \"How do I feel physically today?\" can lead to better decisions, like choosing a lighter workout on a low-energy day."),
                 React.createElement("li", null, React.createElement("strong", null, "Combat the \"Always On\" Mentality:"), " Biorhythms build in the idea of rest and recovery phases. Seeing a \"trough\" on your chart can be a welcome reminder that it's okay—and even necessary—to have less productive days."),
                 React.createElement("li", null, React.createElement("strong", null, "Plan with Intention:"), " You might use a \"peak\" intellectual day to tackle a complex report, or a \"peak\" emotional day for important conversations. Whether the chart is the cause or not, this intentional planning can lead to better outcomes.")
             ),
-            React.createElement("p", null, "Ultimately, think of your biorhythm chart not as a crystal ball, but as a unique kind of journal or planner. It's a fun, structured way to think about your personal energy and to schedule your life with more mindfulness. Use it as a guide for introspection, not as an infallible predictor of the future.")
+            React.createElement("p", null, "Ultimately, think of a biorhythm chart not as a crystal ball, but as a unique kind of journal or planner. It's a fun, structured way to think about your personal energy and to schedule your life with more mindfulness. Use it as a guide for introspection, not as an infallible predictor of the future.")
         ),
     },
     {
@@ -98,7 +162,7 @@ export const articles: Article[] = [
         author: authors.JAMES_CARTER,
         publishDate: '2023-11-12',
         content: React.createElement("div", { className: "prose prose-invert max-w-none text-gray-300" },
-            React.createElement("p", null, "Genealogy has seen a massive surge in popularity, with people eager to trace their roots and understand where they come from. But a family tree is more than just a list of ancestors. When you bring it to life with dates and relationships, as with the LifeArrc Family Tracker, it becomes a dynamic map of your personal history, revealing stories and patterns you might never have noticed."),
+            React.createElement("p", null, "Genealogy has seen a massive surge in popularity, with people eager to trace their roots and understand where they come from. But a family tree is more than just a list of ancestors. When you bring it to life with dates and relationships, as with the ", React.createElement("a", { href: "#/tools/familyTracker", className: "text-blue-400 hover:underline" }, "LifeArrc Family Tracker"), ", it becomes a dynamic map of your personal history, revealing stories and patterns you might never have noticed."),
             React.createElement("h3", { className: "text-blue-400" }, "The Power of Visualization"),
             React.createElement("p", null, "Seeing your family members' ages tick up in real-time, or visualizing the age gaps between siblings and cousins, transforms abstract data into something tangible and personal. It answers questions like:"),
             React.createElement("ul", null,
@@ -197,7 +261,7 @@ export const articles: Article[] = [
         content: React.createElement("div", { className: "prose prose-invert max-w-none text-gray-300" },
             React.createElement("p", null, "Genealogy, the study of family history, is a rewarding hobby that connects you to your past in a profound way. It can seem daunting at first, but with a structured approach, anyone can become a family historian. Here's a guide to get you started."),
             React.createElement("h3", { className: "text-blue-400" }, "Step 1: Start with What You Know"),
-            React.createElement("p", null, "The golden rule of genealogy is to start with yourself and work backward. You are the 'root' of your research. Gather your own vital records (birth certificate, marriage license) and then move to your parents, grandparents, and so on. Use a tool like the LifeArrc Family Tracker to input this initial information. This creates a foundation for your tree."),
+            React.createElement("p", null, "The golden rule of genealogy is to start with yourself and work backward. You are the 'root' of your research. Gather your own vital records (birth certificate, marriage license) and then move to your parents, grandparents, and so on. Use a tool like the ", React.createElement("a", { href: "#/tools/familyTracker", className: "text-blue-400 hover:underline" }, "LifeArrc Family Tracker"), " to input this initial information. This creates a foundation for your tree."),
             React.createElement("h3", { className: "text-blue-400" }, "Step 2: Interview Your Relatives"),
             React.createElement("p", null, "Your older relatives are living libraries of family history. Schedule time to talk to them, and be prepared with specific questions. Ask about names, dates, and places, but also ask for stories. What was life like? Who were their parents? What family traditions do they remember? These interviews can provide invaluable clues and personal details that you won't find in any record."),
             React.createElement("h3", { className: "text-blue-400" }, "Step 3: Organize Your Findings"),
@@ -422,9 +486,10 @@ export const articles: Article[] = [
     {
         slug: 'history-of-the-calendar',
         title: 'A Brief History of the Calendar: From Caesar to Gregory',
+        summary: 'Why do we have leap years? Why does October have "octo" but is the tenth month? Discover the fascinating history of the Julian and Gregorian calendars and how we standardized time.',
+        // FIX: Added missing author and publishDate properties to conform to the Article interface.
         author: authors.JAMES_CARTER,
         publishDate: '2024-02-27',
-        summary: 'Why do we have leap years? Why does October have "octo" but is the tenth month? Discover the fascinating history of the Julian and Gregorian calendars and how we standardized time.',
         content: React.createElement("div", { className: "prose prose-invert max-w-none text-gray-300" },
             React.createElement("p", null, "The calendar on our wall feels like a fixed, immutable system, but it's the result of centuries of astronomical observation, political maneuvering, and mathematical refinement. The story of our modern calendar is primarily a tale of two men: Julius Caesar and Pope Gregory XIII."),
             React.createElement("h3", { className: "text-blue-400" }, "The Problem with the Roman Calendar"),
@@ -477,4 +542,4 @@ export const articles: Article[] = [
             React.createElement("p", null, "While these concepts can be abstract, they challenge our fundamental understanding of existence. They remind us that time, as we perceive it, might be one of the greatest illusions of the human mind.")
         )
     }
-];
+].sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());

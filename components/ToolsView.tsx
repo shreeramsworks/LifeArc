@@ -5,49 +5,47 @@ import AdSenseBanner from './AdSenseBanner';
 
 interface ToolsViewProps {
     activeTool: string;
-    setActiveTool: (tool: 'ageCalculator' | 'familyTracker') => void;
+    onNavigate: (path: string) => void;
 }
 
-const ToolsView: React.FC<ToolsViewProps> = ({ activeTool, setActiveTool }) => {
+const ToolsView: React.FC<ToolsViewProps> = ({ activeTool, onNavigate }) => {
 
     const TabButton: React.FC<{ tabId: string; children: React.ReactNode }> = ({ tabId, children }) => {
         const isActive = activeTool === tabId;
         const baseClasses = "py-3 px-4 sm:px-6 text-base sm:text-lg font-semibold transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900";
         const activeClasses = "border-b-2 border-blue-500 text-blue-400";
         const inactiveClasses = "text-gray-300 hover:text-blue-500 hover:border-b-2 hover:border-gray-600";
+        const href = `#/tools/${tabId}`;
+
+        const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+            e.preventDefault();
+            onNavigate(href);
+        };
 
         return (
-            <button
-                onClick={() => setActiveTool(tabId as 'ageCalculator' | 'familyTracker')}
+            <a
+                href={href}
+                onClick={handleClick}
                 className={`${baseClasses} ${isActive ? activeClasses : inactiveClasses}`}
                 role="tab"
                 aria-selected={isActive}
             >
                 {children}
-            </button>
+            </a>
         );
     };
 
     return (
         <div className="p-4 sm:p-6 lg:p-8">
-            <main className="max-w-4xl mx-auto space-y-8">
-                <header className="text-center">
-                    <h1 className="text-4xl sm:text-5xl font-bold text-white">
-                        ChronoCraft Instruments
-                    </h1>
-                    <p className="mt-2 text-lg text-gray-300">
-                        A suite of precision tools for time calculation and family tracking.
-                    </p>
-                </header>
-
-                <AdSenseBanner />
-
+            <main className="space-y-8">
                 <div className="border-b border-gray-700" role="tablist">
                     <nav className="flex justify-center -mb-px">
-                        <TabButton tabId="ageCalculator">Age Calculator</TabButton>
-                        <TabButton tabId="familyTracker">Family Tracker</TabButton>
+                        <TabButton tabId="ageCalculator">Precise Age Calculator</TabButton>
+                        <TabButton tabId="familyTracker">Private Family Tracker</TabButton>
                     </nav>
                 </div>
+                
+                <AdSenseBanner />
 
                 <div role="tabpanel">
                     {activeTool === 'ageCalculator' && <AgeCalculatorView />}

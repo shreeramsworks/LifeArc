@@ -37,42 +37,6 @@ export function getDaysSinceBirth(dob: Date): number {
 }
 
 
-// --- BIORHYTHM CALCULATOR ---
-export function calculateBiorhythms(daysSinceBirth: number) {
-    const physical = Math.sin(2 * Math.PI * daysSinceBirth / 23);
-    const emotional = Math.sin(2 * Math.PI * daysSinceBirth / 28);
-    const intellectual = Math.sin(2 * Math.PI * daysSinceBirth / 33);
-    const intuition = Math.sin(2 * Math.PI * daysSinceBirth / 38);
-    return { physical, emotional, intellectual, intuition };
-}
-
-// --- LIFE-PATH NUMBER CALCULATOR ---
-/**
- * Calculates the Life-Path Number from a date string (YYYY-MM-DD).
- * It repeatedly sums the digits of the date until a single digit, or a "master number" (11, 22, 33), is reached.
- * @param dobString - The date of birth in "YYYY-MM-DD" format.
- * @returns The Life-Path number (1-9, 11, 22, or 33).
- */
-export function calculateLifePath(dobString: string): number {
-    let sum = dobString.replace(/-/g, '')
-        .split('')
-        .map(Number)
-        .reduce((acc, digit) => acc + digit, 0);
-
-    while (sum > 9 && sum !== 11 && sum !== 22 && sum !== 33) {
-        sum = String(sum).split('').map(Number).reduce((acc, digit) => acc + digit, 0);
-    }
-    
-    return sum;
-}
-
-// --- LUCKY/CAUTION DAY CALCULATOR ---
-export function getPersonalDay(lifePath: number, daysSinceBirth: number): number {
-    const personalDay = (lifePath + daysSinceBirth) % 9;
-    return personalDay === 0 ? 9 : personalDay;
-}
-
-
 // --- HISTORICAL EVENTS ---
 export function searchEvents(query: string, category: string, dob: Date) {
     const lowerQuery = query.toLowerCase().trim();

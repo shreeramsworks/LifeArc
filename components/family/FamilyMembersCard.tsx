@@ -41,8 +41,16 @@ const AddMemberModal: React.FC<{
                 setCustomRelation(member.relation);
             }
             const date = new Date(member.dobISO);
-            setDob(date.toISOString().split('T')[0]);
-            setTime(date.toTimeString().split(' ')[0].substring(0, 5));
+            // Defensive check for invalid dates from localStorage
+            if (!isNaN(date.getTime())) {
+                setDob(date.toISOString().split('T')[0]);
+                setTime(date.toTimeString().split(' ')[0].substring(0, 5));
+            } else {
+                setDob('');
+                setTime('');
+                console.error('Invalid date format encountered for member:', member);
+                setError('Could not read the stored date for this member. Please set it again.');
+            }
         } else {
             setName('');
             setRelation(RELATIONS[0]);

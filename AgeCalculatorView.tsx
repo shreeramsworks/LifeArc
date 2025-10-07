@@ -73,8 +73,8 @@ const AgeCalculatorView: React.FC = () => {
                 <h1 className="text-4xl sm:text-5xl font-bold text-white">
                     Precision Age Calculator - Calculate Your Exact Age
                 </h1>
-                <p className="mt-2 text-lg text-gray-300 max-w-3xl mx-auto">
-                   Instantly <strong>calculate age</strong> from your <strong>date of birth</strong> and find out '<strong>how old am I</strong>' down to the very second. This <strong>secure age calculator</strong> is 100% private - no data is ever stored.
+                <p className="mt-2 text-lg text-gray-300">
+                   Calculate your exact age in years, months, days, hours, and seconds. Our secure age calculator is 100% private - no data is stored.
                 </p>
             </header>
             <CurrentTimeCard now={now} locale={userLocale} timezone={userTimezone} />
@@ -105,22 +105,14 @@ const AgeCalculatorView: React.FC = () => {
                     />
                 </div>
             )}
-            <div className="bg-gray-800 shadow-lg rounded-xl p-6 border border-gray-700 mt-8">
-                 <h2 className="text-2xl font-bold text-blue-400 mb-4">Why Choose Our Private Age Calculator?</h2>
-                 <ul className="list-disc list-inside space-y-2 text-gray-300">
-                    <li><strong>100% Browser-Based Calculations:</strong> Your date of birth is processed on your device. We practice <strong>no data collection</strong>, guaranteed.</li>
-                    <li><strong>Calculate Age to the Second:</strong> Our <strong>precise age calculator</strong> gives you a live-updating breakdown of your life in years, months, days, hours, minutes, and seconds.</li>
-                     <li><strong>No Data Collection Guarantee:</strong> Unlike other tools, we don't store or track your personal information. This is a truly <strong>secure age calculator</strong>.</li>
-                 </ul>
-            </div>
             <InstructionsCard 
                 title="How to Use the Secure Age Calculator"
                 steps={[
-                    "Enter your exact 'age calculator date of birth' and time of birth in the fields provided.",
-                    "Select your birth timezone for the World Clock to accurately show your birth moment in different cities.",
-                    "Click 'Calculate Age' to see your age update in real-time. Find out 'how old am i to the second'.",
-                    "The results include a 'precise birthday countdown timer' and a breakdown of your age in total days, hours, and minutes.",
-                    "Our 'age calculator that shows seconds' is completely private. Your data is never collected or stored."
+                    "Enter your exact date and time of birth in the fields provided.",
+                    "Select your birth timezone. This helps contextualize your birth moment on the World Clock.",
+                    "Click the 'Calculate Age' button to generate your detailed time analysis.",
+                    "Explore the results, including your precise age, your next birthday countdown, and more.",
+                    "Your data is never collected, making this a completely private age calculator."
                 ]}
             />
         </div>

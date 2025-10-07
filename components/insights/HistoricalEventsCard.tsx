@@ -21,7 +21,7 @@ const newManual = [
         </ul>
     },
     { heading: "Example", content: <p>Searching "apollo" with DOB 1960-01-01 shows you were 9y 6m 19d for the Moon Landing.</p> },
-    { heading: "Disclaimer", content: <p>Ages are exact. The event list is extensive but may not include all regional or niche events.</p> }
+    { heading: "Disclaimer", content: <p>Ages are exact. This is a modern chronological tool provided for perspective.</p> }
 ];
 
 const HistoricalEventsCard: React.FC<HistoricalEventsCardProps> = ({ dob }) => {
@@ -42,7 +42,7 @@ const HistoricalEventsCard: React.FC<HistoricalEventsCardProps> = ({ dob }) => {
                             onClick={() => setActiveCategory(category)}
                             className={`px-3 py-1 text-sm font-semibold rounded-full transition-colors ${
                                 activeCategory === category 
-                                ? 'bg-blue-600 text-white' 
+                                ? 'bg-sky-600 text-white' 
                                 : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                             }`}
                         >
@@ -56,7 +56,7 @@ const HistoricalEventsCard: React.FC<HistoricalEventsCardProps> = ({ dob }) => {
                     onChange={(e) => setQuery(e.target.value)}
                     placeholder={`Search in "${activeCategory}"...`}
                     aria-label="Search for historical events"
-                    className="w-full p-3 bg-gray-900 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 placeholder:text-gray-400"
+                    className="w-full p-3 bg-gray-900 border border-gray-600 rounded-md shadow-sm focus:ring-sky-500 focus:border-sky-500 placeholder:text-gray-400"
                 />
                 
                 <div className="max-h-96 overflow-y-auto pr-2">
@@ -68,7 +68,7 @@ const HistoricalEventsCard: React.FC<HistoricalEventsCardProps> = ({ dob }) => {
                                         <p className="font-semibold text-gray-200">{event.title}</p>
                                         <p className="text-sm text-gray-300">{new Date(event.date + 'T00:00:00').toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</p>
                                     </div>
-                                    <div className="text-right font-mono text-blue-400 text-sm whitespace-nowrap">
+                                    <div className="text-right font-mono text-sky-400 text-sm whitespace-nowrap">
                                         {event.ageAtEvent.years}y {event.ageAtEvent.months}m {event.ageAtEvent.days}d
                                     </div>
                                 </li>
