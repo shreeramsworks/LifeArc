@@ -41,7 +41,7 @@ const LiveMiniCalculator: React.FC = () => {
                 type="date"
                 aria-label="Enter your date of birth to see your age update in real-time"
                 onChange={(e) => setDob(e.target.value)}
-                className="w-full p-4 bg-gray-800/80 backdrop-blur-sm border border-gray-600 text-gray-200 rounded-lg shadow-sm text-lg focus:ring-blue-500 focus:border-blue-500"
+                className="w-full p-4 bg-white border border-gray-300 text-gray-900 rounded-lg shadow-sm text-lg focus:ring-blue-500 focus:border-blue-500 placeholder-gray-500"
             />
             {age && (
                 <div className="mt-6 p-4 bg-gray-900/80 backdrop-blur-sm rounded-lg shadow-inner border border-gray-700">
@@ -93,7 +93,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             {/* Hero Section */}
             <section className="text-center mx-auto py-20 sm:py-24 px-4 sm:px-6 lg:px-8">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white">
-                    Private Age Calculator, Family Tree & Numerology Tools
+                    Private Age Calculator, Family Tree &amp; Numerology Tools
                 </h1>
                 <p className="mt-6 text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
                    Discover personal insights with complete privacy. Our tools are <strong>100% browser-based</strong> with <strong>zero data collection</strong>. Calculate your age, track your family, and explore Vedic numerology, all with guaranteed anonymity.
