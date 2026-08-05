@@ -105,6 +105,9 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                 >
                     Explore The Tools
                 </button>
+                <div className="mt-10 flex justify-center">
+                    <a href="https://aichief.com/ai-design-tools/claude-ai-design?utm_source=aichief_embed" data-aichief-domain-verification="evNlNWYNAPYFxm3-Y1Nl4BNjldRTrSSH" title="Claude"><img src="https://aichief.com/assets/brand/dark-listed-logo.svg" alt="Claude Listed on AIChief" width="305" height="94" /></a>
+                </div>
             </section>
 
             {/* "Explore Your Universe" Showcase Section */}
